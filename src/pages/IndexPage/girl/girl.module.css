@@ -1,0 +1,15 @@
+.animationContainer {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+
+@media screen and (min-device-width: 720px) {
+  .animationContainer svg {
+    width: 840px;
+    height: 640px;
+  }
+  .animationContainer {
+    right: -5%;
+  }
+}

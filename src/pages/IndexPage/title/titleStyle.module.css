@@ -1,0 +1,67 @@
+.titleContainer {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleOne {
+  font-size: 5vw;
+  font-family: "Barlow", sans-serif;
+  align-self: center;
+  font-weight: bold;
+  color: #95020a;
+}
+
+.titleTwo {
+  font-size: 8vw;
+  font-family: "Barlow", sans-serif;
+  align-self: flex-start;
+  font-weight: bold;
+  color: #647993;
+}
+
+.titleThree {
+  font-size: 7vw;
+  font-family: "Barlow", sans-serif;
+  align-self: flex-end;
+  font-weight: bold;
+  color: #647993;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 720px) {
+  /* some CSS here */
+  .titleContainer {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+  }
+  .titleOne {
+    font-size: 40px;
+  }
+  .titleTwo {
+    font-size: 52px;
+  }
+  .titleThree {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  /* some CSS here */
+  .titleContainer {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+  }
+  .titleOne {
+    font-size: 30px;
+  }
+  .titleTwo {
+    font-size: 40px;
+  }
+  .titleThree {
+    font-size: 30px;
+  }
+}
