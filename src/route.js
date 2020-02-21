@@ -3,6 +3,7 @@ import { Switch, BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import IndexPage from './pages/IndexPage/indexPage';
+import DeptListPage from './pages/DeptListPage/deptListPage'
 import Header from './pages/Header/header'
 
 
@@ -17,6 +18,7 @@ const Router=({store})=>{
             <Header/>
             <Switch>
                 <Route exact path="/" component={IndexPage}/>
+                <Route exact path="/dept" component={DeptListPage}/>
                 <Route component={NoMatch}/>
             </Switch>
         </BrowserRouter>

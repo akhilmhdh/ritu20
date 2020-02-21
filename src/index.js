@@ -5,7 +5,9 @@ import { createStore,applyMiddleware} from 'redux';
 
 import reducer from './Reducers';
 import Router from './route';
+import './swiper.min.css'
 import './index.css';
+
 import * as serviceWorker from './serviceWorker';
 
 const createStoreMiddleWare=applyMiddleware(thunk)(createStore)

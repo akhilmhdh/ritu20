@@ -8,6 +8,7 @@ import Birds from './birds/birdsSVG'
 import girlStyle from './girl/girl.module.css'
 import styles from './indexPageStyle.module.css'
 
+
 const IndexPage = ()=>{
     return(
     <div className={styles.container}>
