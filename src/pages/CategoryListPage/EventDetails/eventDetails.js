@@ -13,13 +13,13 @@ const Tab1=(props)=>{
         <a href={props.mail}>{props.online?"Submit Via":"Register Now"}</a>
         </div>
         <div className={eventDetailsStyle.price}>
-            PRICE:{props.price}
+            PRIZE: {props.prize}
         </div>
         <div className={eventDetailsStyle.time}>
-            DATE:{props.date} 
+            DATE: {props.date} 
         </div>
         <div className={eventDetailsStyle.time}>
-        TIME:{props.time}
+        TIME: {props.time}
         </div>
         <div dangerouslySetInnerHTML={{__html:cvtJSON2HTML(props.details)}}
         className={eventDetailsStyle.details}></div>
@@ -74,7 +74,7 @@ class EventDetails extends Component{
                 component=<Tab1 mail={this.props.body[index].reglink}
                 online={this.props.body[index].online}
                 details={this.props.body[index].description}
-                price={this.props.body[index].price}
+                prize={this.props.body[index].prize}
                 date={this.props.body[index].date}
                 time={this.props.body[index].time}/>
                 break;
