@@ -1,4 +1,6 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router-dom';
+
 import headerStyle from './headerStyle.module.css'
 
 import Hamburgur from './menu/hamburgur'
@@ -16,19 +18,19 @@ class Header extends Component{
             <span className={headerStyle.navToggle} onClick={()=>this.setState({active:!this.state.active})}>
                 <Hamburgur/>
             </span>
-            <a href="#" className={headerStyle.logo}>ritu'20</a>
+            <Link to="/" className={headerStyle.logo}>ritu'20</Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
                 <li>
-                    <a href="#" className={headerStyle.navItem}>ABOUT</a>
+                    <Link to="/" className={headerStyle.navItem}>ABOUT</Link>
                 </li>
                 <li>
-                    <a href="#" className={headerStyle.navItem}>EVENTS</a>
+                    <Link to="/events/dept" className={headerStyle.navItem}>EVENTS</Link>
                 </li>
                 <li>
-                    <a href="#" className={headerStyle.navItem}>CONTACT</a>
+                    <Link to="/workshops/dept" className={headerStyle.navItem}>WORKSHOPS</Link>
                 </li>
                 <li>
-                    <a href="#" className={headerStyle.navItem}>TEAM</a>
+                    <Link to="/" className={headerStyle.navItem}>TEAM</Link>
                 </li>
             </ul>
         </nav>

@@ -323,13 +323,22 @@ code {
   width: 100vw;
   height: 70vh;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 .swiper-slide {
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   width: 300px;
   height: 300px;
+}
+.swiper-pagination-bullet {
+  height: 20px;
+  width: 20px;
+}
+.swiper-pagination-bullet-active {
+  background-color: transparent;
+  border: white 1px solid;
+  padding: 1px;
 }
 
 @media screen and (max-device-width: 1024px) {

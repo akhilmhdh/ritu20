@@ -2,9 +2,10 @@ import React from 'react';
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
+import Header from './pages/Header/header';
 import IndexPage from './pages/IndexPage/indexPage';
-import DeptListPage from './pages/DeptListPage/deptListPage'
-import Header from './pages/Header/header'
+import DeptListPage from './pages/DeptListPage/deptListPage';
+import CategoryListPage from './pages/CategoryListPage/categoryListPage';
 
 
 const NoMatch=()=>{
@@ -18,7 +19,9 @@ const Router=({store})=>{
             <Header/>
             <Switch>
                 <Route exact path="/" component={IndexPage}/>
-                <Route exact path="/dept" component={DeptListPage}/>
+                <Route exact path="/:category/dept" component={DeptListPage}/>
+                <Route exact path="/:category/dept/:id" component={CategoryListPage}>
+                </Route>
                 <Route component={NoMatch}/>
             </Switch>
         </BrowserRouter>
