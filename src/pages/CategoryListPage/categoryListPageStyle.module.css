@@ -8,14 +8,13 @@
   width: 100vw;
   height: 100vh;
   background-color: #000f1e;
-}
-.pagination span {
-  background-color: #007aff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.swiper-slide div:nth-child(1) {
-  font-size: 36px;
-  font-family: "Harley", sans-serif;
+.pagination span {
+  background-color: #007aff;
 }
 
 .textContainer {

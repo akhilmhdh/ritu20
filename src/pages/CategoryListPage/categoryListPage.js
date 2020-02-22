@@ -1,6 +1,10 @@
 import React,{Component} from 'react';
 import Swiper from 'swiper';
 import axios from 'axios'
+import {Route} from 'react-router-dom';
+
+import WorkShopDetails from './WorkshopDetails/workShopDetails'
+import EventDetails from './EventDetails/eventDetails'
 
 import categoryListPageStyle from './categoryListPageStyle.module.css';
 
@@ -12,10 +16,11 @@ class CategoryListPage extends Component{
         this.state={events:null}
     }
     componentDidMount(){
-        // eslint-disable-next-line no-unused-vars
-        axios.get(`http://test123.ritu20.com/events?dept=${this.props.match.params.id}`).then(res=>res.data)
+      const {match:{params:{id,category}}}=this.props;
+        axios.get(`http://test123.ritu20.com/${category}?dept=${id}`).then(res=>res.data)
         .then((data)=>{
             this.setState({events:data});
+            // eslint-disable-next-line no-unused-vars
             const swiper = new Swiper('.swiper-container', {
               effect: 'coverflow',
               grabCursor: true,
@@ -47,10 +52,17 @@ class CategoryListPage extends Component{
             <div className={categoryListPageStyle.container}>
               <div className="swiper-container">
                 <div className="swiper-wrapper">
-                     {this.state.events.head.map((el)=>{
+                     {this.state.events.head.map((el,index)=>{
                          return(
                         <div className="swiper-slide"
-                         style={{backgroundImage:`url(${el.image})`}}>
+                         style={{backgroundImage:`url(${el.image})`}}
+                         onClick={()=>{
+                           const url=this.props.match.params.category==="events"
+                           ?`${this.props.match.url}/${index}/eventDetails`
+                           :`${this.props.match.url}/${index}/workShopDetails`;
+                           this.props.history.push(url)
+                         }}
+                        >
                            <div className={categoryListPageStyle.textContainer}>
                              <div className={categoryListPageStyle.title}>{el.name}</div>
                            </div>
@@ -62,6 +74,10 @@ class CategoryListPage extends Component{
               <div className="swiper-button-next"></div>
               <div className="swiper-button-prev"></div>
             </div>
+            <Route path={`${this.props.match.path}/:index/eventDetails`} render={
+              (props)=><EventDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
+            <Route path={`${this.props.match.path}/:index/workshopDetails`} render={
+              (props)=><WorkShopDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
           </div>
         )
        }

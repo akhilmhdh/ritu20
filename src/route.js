@@ -20,8 +20,7 @@ const Router=({store})=>{
             <Switch>
                 <Route exact path="/" component={IndexPage}/>
                 <Route exact path="/:category/dept" component={DeptListPage}/>
-                <Route exact path="/:category/dept/:id" component={CategoryListPage}>
-                </Route>
+                <Route path="/:category/dept/:id" component={CategoryListPage}/>
                 <Route component={NoMatch}/>
             </Switch>
         </BrowserRouter>

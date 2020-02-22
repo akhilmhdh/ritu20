@@ -1,0 +1,122 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.blurContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.blurContainer:before {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  content: "";
+  filter: blur(2px);
+}
+.tabContainer {
+  position: relative;
+  top: 10%;
+  left: 0;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: -1px 15px 30px -12px black;
+  background-color: #191828;
+  color: #efedef;
+  padding: 15px;
+  border-radius: 10px;
+}
+.tabContainer div:last-child {
+  overflow-y: scroll;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 1em;
+}
+.tabs div {
+  text-align: center;
+  flex: 1;
+  border-right: 1px #42414dbe solid;
+  cursor: pointer;
+  padding: 10px;
+}
+.active {
+  border-bottom: 2px #fd264f solid;
+}
+.tab1Container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center;
+}
+.submitBtn {
+  margin: 20px 0 20px 0;
+}
+.tab1Container a {
+  text-decoration: none;
+  background-color: green;
+  color: #efedef;
+  padding: 10px;
+  box-shadow: -1px 15px 30px -12px black;
+  border-radius: 5px;
+}
+.price,
+.time {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #efedef;
+  margin: 10px;
+}
+.details {
+  padding: 10px;
+}
+
+.tab2Container {
+  padding: 10px;
+}
+
+.tab2Container ol {
+  margin: 5px;
+  padding: 5px;
+}
+
+.tab2Container li {
+  margin: 1em 5px 1em 5px;
+}
+
+.tab3Container ul li {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.arrow {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+.arrow span {
+  font-size: 24px;
+}
+
+@media screen and (min-device-width: 720px) {
+  .tabContainer div:last-child {
+    overflow-y: auto;
+  }
+}
