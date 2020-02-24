@@ -7,6 +7,7 @@ import WorkShopDetails from './WorkshopDetails/workShopDetails'
 import EventDetails from './EventDetails/eventDetails'
 
 import categoryListPageStyle from './categoryListPageStyle.module.css';
+import Arrow from '../utils/arrow-back/arrow';
 
 
 
@@ -30,7 +31,7 @@ class CategoryListPage extends Component{
               coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
-                depth: 100,
+                depth: 300,
                 modifier: 1,
                 slideShadows : true,
               },
@@ -54,8 +55,7 @@ class CategoryListPage extends Component{
                 <div className="swiper-wrapper">
                      {this.state.events.head.map((el,index)=>{
                          return(
-                        <div className="swiper-slide"
-                         style={{backgroundImage:`url(${el.image})`}}
+                        <div className={`swiper-slide ${categoryListPageStyle.img_cards}`}
                          onClick={()=>{
                            const url=this.props.match.params.category==="events"
                            ?`${this.props.match.url}/${index}/eventDetails`
@@ -63,8 +63,11 @@ class CategoryListPage extends Component{
                            this.props.history.push(url)
                          }}
                         >
+                          <div className={categoryListPageStyle.imgContainer}>
+                            <img src={el.image} alt="images"/>
+                          </div>
                            <div className={categoryListPageStyle.textContainer}>
-                             <div className={categoryListPageStyle.title}>{el.name}</div>
+                             {el.name}
                            </div>
                          </div>
                          )
@@ -78,6 +81,7 @@ class CategoryListPage extends Component{
               (props)=><EventDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
             <Route path={`${this.props.match.path}/:index/workshopDetails`} render={
               (props)=><WorkShopDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
+          <Arrow path={`/${this.props.match.params.category}/dept`}/>
           </div>
         )
        }

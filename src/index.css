@@ -61,7 +61,7 @@ code {
   position: absolute;
   top: 20%;
   left: -10%;
-  transform: scale(0) translateX(-10vw) translateZ(-50px);
+  transform: scale(0) translateX(-10vw) translateZ(-100px);
   will-change: transform;
 
   animation-name: fly-right-two;
@@ -322,7 +322,7 @@ code {
 .swiper-container {
   width: 100vw;
   height: 70vh;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .swiper-slide {
   background-position: center;
@@ -341,11 +341,33 @@ code {
   padding: 1px;
 }
 
+#cloud1 {
+  transform: translateX(-45vw);
+  animation: move 120s linear 30s infinite;
+}
+#cloud2 {
+  transform: translateX(-40vw);
+  animation: move 120s linear 15s infinite;
+}
+#cloud3 {
+  transform: translateX(-30vw);
+  animation: move 120s linear infinite;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
 @media screen and (max-device-width: 1024px) {
   .swiper-button-next {
     display: none;
   }
   .swiper-button-prev {
+    display: none;
+  }
+  #cloud1 {
     display: none;
   }
 }

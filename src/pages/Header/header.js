@@ -18,18 +18,23 @@ class Header extends Component{
             <span className={headerStyle.navToggle} onClick={()=>this.setState({active:!this.state.active})}>
                 <Hamburgur/>
             </span>
-            <Link to="/" className={headerStyle.logo}>ritu'20</Link>
+            <Link to="/" className={headerStyle.logo}>
+                <div>
+                    <div><img src="/img/ritu2.png" alt="logo"/></div>
+                   <div className={headerStyle.ritu}>Ritu<sup><sup>20</sup></sup></div>
+                </div>
+            </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
-                <li>
-                    <Link to="/" className={headerStyle.navItem}>ABOUT</Link>
+               <li onClick={()=>this.setState({active:true})}>
+                    <Link to="/" className={headerStyle.navItem} >ABOUT</Link>
                 </li>
-                <li>
+                <li onClick={()=>this.setState({active:true})}>
                     <Link to="/events/dept" className={headerStyle.navItem}>EVENTS</Link>
                 </li>
-                <li>
+                <li onClick={()=>this.setState({active:true})}>
                     <Link to="/workshops/dept" className={headerStyle.navItem}>WORKSHOPS</Link>
                 </li>
-                <li>
+                <li onClick={()=>this.setState({active:true})}>
                     <Link to="/" className={headerStyle.navItem}>TEAM</Link>
                 </li>
             </ul>

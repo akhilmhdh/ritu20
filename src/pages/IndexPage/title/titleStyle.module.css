@@ -4,6 +4,7 @@
   left: 5%;
   display: flex;
   flex-direction: column;
+  z-index: 5;
 }
 
 .titleOne {
@@ -19,7 +20,7 @@
   font-family: "Barlow", sans-serif;
   align-self: flex-start;
   font-weight: bold;
-  color: #647993;
+  color: #3f3d56;
 }
 
 .titleThree {
@@ -27,7 +28,7 @@
   font-family: "Barlow", sans-serif;
   align-self: flex-end;
   font-weight: bold;
-  color: #647993;
+  color: #3f3d56;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 720px) {

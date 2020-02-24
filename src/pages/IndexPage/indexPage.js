@@ -4,6 +4,7 @@ import Girl from './girl/girl'
 import Title from './title/title'
 import Date from './date/date'
 import Birds from './birds/birdsSVG'
+import Clouds from './clouds/clouds'
 
 import girlStyle from './girl/girl.module.css'
 import styles from './indexPageStyle.module.css'
@@ -16,6 +17,7 @@ const IndexPage = ()=>{
             <Girl/>
         </div>
         <Birds/>
+        <Clouds/>
         <Title/>
         <Date/>
     </div>);

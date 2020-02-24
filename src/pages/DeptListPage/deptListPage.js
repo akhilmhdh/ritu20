@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import Swiper from 'swiper'
 
+import Arrow from '../utils/arrow-back/arrow'
+
 import deptListPageStyle from './deptListPageStyle.module.css'
 
 const DeptList=['general','ece','cse','mech','eee','arch','civil','mca']
@@ -53,6 +55,7 @@ class DeptListPage extends Component{
             <div className="swiper-button-next"></div>
             <div className="swiper-button-prev"></div>
           </div>
+          <Arrow path="/"/>
         </div>
       )
      }

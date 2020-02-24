@@ -121,4 +121,13 @@
   .tabContainer div:last-child {
     overflow-y: auto;
   }
+  .tabContainer div:last-child::-webkit-scrollbar {
+    width: 0;
+  }
+  .tabContainer {
+    overflow: -moz-scrollbars-none;
+  }
+  .tabContainer {
+    -ms-overflow-style: none;
+  }
 }
