@@ -8,6 +8,7 @@ import Clouds from './clouds/clouds'
 
 import girlStyle from './girl/girl.module.css'
 import styles from './indexPageStyle.module.css'
+import ButterFly from './butterfly/butterfly'
 
 
 const IndexPage = ()=>{
@@ -15,6 +16,7 @@ const IndexPage = ()=>{
     <div className={styles.container}>
         <div className={girlStyle.animationContainer}>
             <Girl/>
+            <ButterFly/>
         </div>
         <Birds/>
         <Clouds/>

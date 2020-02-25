@@ -25,18 +25,25 @@ class Header extends Component{
                 </div>
             </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
-               <li onClick={()=>this.setState({active:true})}>
-                    <Link to="/" className={headerStyle.navItem} >ABOUT</Link>
-                </li>
-                <li onClick={()=>this.setState({active:true})}>
-                    <Link to="/events/dept" className={headerStyle.navItem}>EVENTS</Link>
-                </li>
-                <li onClick={()=>this.setState({active:true})}>
-                    <Link to="/workshops/dept" className={headerStyle.navItem}>WORKSHOPS</Link>
-                </li>
-                <li onClick={()=>this.setState({active:true})}>
-                    <Link to="/" className={headerStyle.navItem}>TEAM</Link>
-                </li>
+                <Link to="/" className={headerStyle.navItem} >
+                    <li onClick={()=>this.setState({active:true})}>ABOUT</li>
+                </Link>
+                <Link to="/events/dept" className={headerStyle.navItem}>
+                    <li onClick={()=>this.setState({active:true})}> EVENTS</li>
+                </Link>
+                <Link to="/workshops/dept" className={headerStyle.navItem}>
+                    <li onClick={()=>this.setState({active:true})}>WORKSHOPS</li>
+                </Link>
+                <Link to="/" className={headerStyle.navItem}>
+                <li onClick={()=>this.setState({active:true})}>TEAM</li>
+                </Link>
+                <Link to="/" className={headerStyle.socialContainer+" "+headerStyle.navItem}>
+                            <li>
+                                <a href="#"><img src="/img/insta.png" alt="social"/></a>
+                                <a href="#"><img src="/img/facebook.png" alt="social"/></a>
+                            </li>
+                </Link>
+                <span className={headerStyle.close} onClick={()=>this.setState({active:true})}></span>
             </ul>
         </nav>
     </div>)

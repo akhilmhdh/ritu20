@@ -1,22 +1,31 @@
-.main {
-  list-style-type: none;
-  padding: 0;
-  display: none;
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  align-items: center;
+  height: 60px;
+  font-size: 1em;
+  background-color: transparent;
 }
+
 .container {
   position: absolute;
   width: 100vw;
   z-index: 10;
   overflow: hidden;
+  overflow: hidden;
 }
-.navContainer {
-  font-size: 1em;
-  background-color: transparent;
+.main {
+  display: flex;
+  flex-direction: row;
+  margin-right: 2em;
+  align-items: center;
 }
 .main li {
-  padding: 0.5em 0 1em 0;
-  text-align: center;
-  margin: 1em auto;
+  margin: 0;
+  margin-left: 1em;
+  padding: 1em;
+  list-style-type: none;
   transition: 0.1s;
   font-family: "harabararegular";
   letter-spacing: 2px;
@@ -24,7 +33,7 @@
 .navItem,
 .logo {
   text-decoration: none;
-  color: #3f3d56;
+  color: #2f2c4a;
   cursor: pointer;
 }
 .main li:hover {
@@ -48,40 +57,96 @@
 }
 
 .navToggle {
+  display: none;
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
-  border: 1px solid;
-  border-color: #647993;
   padding: 4px 8px 4px 8px;
   border-radius: 5px;
 }
 
-.active {
-  display: block;
+.socialContainer {
+  padding: 0;
 }
 
-@media screen and (min-device-width: 720px) {
-  .navContainer {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    align-items: center;
-    height: 60px;
-  }
+.socialContainer a {
+  padding-left: 1em;
+}
+.socialContainer img {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-device-width: 780px) {
   .main {
+    list-style-type: none;
+    padding: 0;
+    width: 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin: 0;
     display: flex;
-    flex-direction: row;
-    margin-right: 2em;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    color: transparent;
+  }
+  .navItem {
+    color: inherit;
   }
   .main li {
-    margin: 0;
-    margin-left: 1em;
     padding: 1em;
+    text-align: center;
+    margin: 1em auto;
+    transition: 0.1s;
+    font-family: "harabararegular";
+    letter-spacing: 2px;
+    color: inherit;
+    transition: 0.5s ease-in-out;
   }
 
+  .active {
+    width: 250px;
+    color: #ebedec;
+  }
   .navToggle {
-    display: none;
+    display: block;
+    z-index: 5;
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:active {
+    transform: rotate(90deg);
+  }
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 30px;
+    width: 5px;
+    background-color: white;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
   }
 }

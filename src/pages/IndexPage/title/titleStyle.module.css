@@ -18,24 +18,45 @@
 .titleTwo {
   font-size: 8vw;
   font-family: "Barlow", sans-serif;
-  align-self: flex-start;
+  align-self: center;
   font-weight: bold;
-  color: #3f3d56;
+  color: #2f2c4a;
 }
 
 .titleThree {
   font-size: 7vw;
   font-family: "Barlow", sans-serif;
-  align-self: flex-end;
   font-weight: bold;
+  color: #2f2c4a;
+  align-self: center;
+}
+.blink {
+  font-weight: lighter;
+  font-family: sans-serif;
   color: #3f3d56;
+  animation: blinking 0.75s infinite;
+}
+
+@keyframes blinking {
+  25% {
+    color: transparent;
+  }
+  50% {
+    color: #3f3d56;
+  }
+  75% {
+    color: transparent;
+  }
+  100% {
+    color: #3f3d56;
+  }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 720px) {
   /* some CSS here */
   .titleContainer {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 15%;
   }
   .titleOne {

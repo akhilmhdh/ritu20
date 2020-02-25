@@ -1,0 +1,74 @@
+.butterfly3 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 90px;
+  height: 100px;
+  animation: flight_3 10s forwards cubic-bezier(0.3, 0, 0.7, 1);
+  animation-delay: 0.25s;
+}
+.butterfly3_body {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 34px;
+  background: url(/img/butterfly3/butterfly_body.png) no-repeat;
+  transform: scale(0.4);
+  filter: brightness(0);
+}
+.butterfly3_left {
+  width: 49px;
+  height: 38px;
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  background: url(/img/butterfly3/butterfly_left.png) no-repeat;
+  transform-origin: 92%;
+  filter: brightness(0);
+  animation: fly3_left 0.3s infinite alternate;
+}
+.butterfly3_right {
+  animation: fly3_right 0.3s infinite alternate;
+  width: 47px;
+  height: 95px;
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  background: url(/img/butterfly3/butterfly_right.png) no-repeat;
+  transform-origin: left;
+  filter: brightness(0);
+}
+
+@keyframes flight_3 {
+  0% {
+    transform: translate(0);
+    backface-visibility: hidden;
+  }
+  100% {
+    transform: translate(-70px, -180px);
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes fly3_left {
+  from {
+    backface-visibility: hidden;
+    transform: scale(0.25) perspective(1200px) rotateY(-60deg) rotateX(-13deg);
+  }
+  to {
+    backface-visibility: hidden;
+    transform: scale(0.25) perspective(1200px) rotateY(-88deg) rotateX(-13deg);
+  }
+}
+
+@keyframes fly3_right {
+  from {
+    backface-visibility: hidden;
+    transform: scale(0.25) perspective(1200px) rotateY(0);
+  }
+  to {
+    backface-visibility: hidden;
+    transform: scale(0.25) perspective(1200px) rotateY(-35deg);
+  }
+}

@@ -5,7 +5,7 @@ import dateStyle from './dateStyle.module.css'
 const Date=()=>{
     return(
     <div className={dateStyle.title}>
-        March 19-22
+        MAR 19 - 22
     </div>)
 }
 

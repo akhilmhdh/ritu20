@@ -4,6 +4,7 @@ import Swiper from 'swiper'
 import Arrow from '../utils/arrow-back/arrow'
 
 import deptListPageStyle from './deptListPageStyle.module.css'
+import CollegeLogo from '../utils/college-logo/collegeLogo'
 
 const DeptList=['general','ece','cse','mech','eee','arch','civil','mca']
 
@@ -56,6 +57,7 @@ class DeptListPage extends Component{
             <div className="swiper-button-prev"></div>
           </div>
           <Arrow path="/"/>
+          <CollegeLogo/>
         </div>
       )
      }
