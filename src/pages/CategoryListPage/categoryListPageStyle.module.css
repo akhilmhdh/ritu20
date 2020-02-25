@@ -6,12 +6,19 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background: rgb(92, 68, 218);
+  /* background: rgb(92, 68, 218);
   background: linear-gradient(
     180deg,
     rgba(92, 68, 218, 1) 0%,
     rgba(149, 84, 176, 1) 50%,
     rgba(207, 100, 133, 1) 100%
+  ); */
+  background: rgb(253, 135, 98);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 135, 98, 1) 0%,
+    rgba(233, 92, 85, 1) 50%,
+    rgba(214, 49, 72, 1) 100%
   );
   display: flex;
   flex-direction: column;
@@ -22,40 +29,16 @@
   background-color: #007aff;
 }
 .img_cards {
-  box-shadow: -1px 15px 30px -12px black;
+  /* box-shadow: -1px 15px 30px -12px black; */
   width: 300px;
   height: 300px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
-  /* background-color: #7a7adb;
-  background-image: linear-gradient(315deg, #7a7adb 0%, #170e13 74%); */
-  /* background-color: #4062bb;
-  background-image: linear-gradient(315deg, #4062bb 0%, #ebebeb 74%); */
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   padding: 10px;
 }
-.imgContainer {
-  flex: 2;
-}
-.imgContainer img {
-  width: 240px;
-  height: 240px;
-  border-radius: 20%;
-}
 
-.textContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex: 1;
-  text-transform: uppercase;
-  color: BLACK;
-  font-stretch: wider;
-  font-family: "Franklin Gothic Medium", Arial, sans-serif;
-  font-size: 1.5em;
+.imgContainer img {
+  box-shadow: -1px 15px 30px -12px black;
+  width: 300px;
+  height: auto;
 }

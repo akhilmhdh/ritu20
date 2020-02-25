@@ -33,7 +33,7 @@ class CategoryListPage extends Component{
                 stretch: 0,
                 depth: 300,
                 modifier: 1,
-                slideShadows : true,
+                slideShadows : false,
               },
               pagination: {
                 el: '.swiper-pagination',
@@ -66,9 +66,6 @@ class CategoryListPage extends Component{
                           <div className={categoryListPageStyle.imgContainer}>
                             <img src={el.image} alt="images"/>
                           </div>
-                           <div className={categoryListPageStyle.textContainer}>
-                             {el.name}
-                           </div>
                          </div>
                          )
                      })}

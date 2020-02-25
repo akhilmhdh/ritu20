@@ -1,12 +1,12 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background: rgb(92, 68, 218);
+  background: rgb(253, 135, 98);
   background: linear-gradient(
     180deg,
-    rgba(92, 68, 218, 1) 0%,
-    rgba(149, 84, 176, 1) 50%,
-    rgba(207, 100, 133, 1) 100%
+    rgba(253, 135, 98, 1) 0%,
+    rgba(233, 92, 85, 1) 50%,
+    rgba(214, 49, 72, 1) 100%
   );
 }
 .deptIconIndex {

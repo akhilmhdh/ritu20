@@ -1,9 +1,28 @@
 @font-face {
   font-family: "harabararegular";
-  src: url("/fonts/harabara-webfont.woff2") format("woff2"),
-    url("/fonts/harabara-webfont.woff") format("woff");
+  src: url("/fonts/harabara/harabara-webfont.woff2") format("woff2"),
+    url("/fonts/harabara/harabara-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/montserrat/montserrat-v14-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("/fonts/montserrat/montserrat-v14-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/montserrat/montserrat-v14-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/fonts/montserrat/montserrat-v14-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("/fonts/montserrat/montserrat-v14-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/fonts/montserrat/montserrat-v14-latin-regular.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }
 
 body,
@@ -329,7 +348,7 @@ code {
 }
 .swiper-container {
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   padding-top: 100px;
 }
 .swiper-slide {
