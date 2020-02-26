@@ -21,7 +21,7 @@ class DeptListPage extends Component{
         coverflowEffect: {
           rotate: 30,
           stretch: 0,
-          depth: 500,
+          depth: 300,
           modifier: 1,
           slideShadows : true,
         },

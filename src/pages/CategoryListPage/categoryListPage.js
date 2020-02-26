@@ -8,6 +8,7 @@ import EventDetails from './EventDetails/eventDetails'
 
 import categoryListPageStyle from './categoryListPageStyle.module.css';
 import Arrow from '../utils/arrow-back/arrow';
+import RituSpinner from '../utils/ritu-spinner/rituSpinner';
 
 
 
@@ -48,7 +49,8 @@ class CategoryListPage extends Component{
         });
       }
        render(){
-           if(this.state.events==null){return <div className={categoryListPageStyle.container}>Loading...</div>}
+           if(this.state.events==null){
+             return <div className={categoryListPageStyle.spinnerContainer}><RituSpinner/></div>}
         return(
             <div className={categoryListPageStyle.container}>
               <div className="swiper-container">

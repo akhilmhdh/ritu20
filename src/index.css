@@ -387,6 +387,89 @@ code {
   }
 }
 
+#red {
+  animation: cycleRed 1s infinite;
+}
+#orange {
+  animation: cycleOrange 1s infinite;
+}
+#green {
+  animation: cycleGreen 1s infinite;
+}
+#blue {
+  animation: cycleBlue 1s infinite;
+}
+@keyframes cycleRed {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cycleOrange {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cycleGreen {
+  0% {
+    animation-timing-function: steps(1, end);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cycleBlue {
+  0% {
+    animation-timing-function: steps(1, end);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-device-width: 1024px) {
   .swiper-button-next {
     display: none;

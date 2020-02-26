@@ -16,3 +16,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-device-height: 600px) {
+  .container {
+    display: none;
+  }
+}

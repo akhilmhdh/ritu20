@@ -25,7 +25,7 @@ class Header extends Component{
                 </div>
             </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
-                <Link to="/" className={headerStyle.navItem} >
+                <Link to="/about" className={headerStyle.navItem} >
                     <li onClick={()=>this.setState({active:true})}>ABOUT</li>
                 </Link>
                 <Link to="/events/dept" className={headerStyle.navItem}>

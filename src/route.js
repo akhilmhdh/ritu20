@@ -6,6 +6,7 @@ import Header from './pages/Header/header';
 import IndexPage from './pages/IndexPage/indexPage';
 import DeptListPage from './pages/DeptListPage/deptListPage';
 import CategoryListPage from './pages/CategoryListPage/categoryListPage';
+import AboutPage from './pages/AboutPage/about';
 
 
 const NoMatch=()=>{
@@ -19,6 +20,7 @@ const Router=({store})=>{
             <Header/>
             <Switch>
                 <Route exact path="/" component={IndexPage}/>
+                <Route exact path="/about" component={AboutPage}/>
                 <Route exact path="/:category/dept" component={DeptListPage}/>
                 <Route path="/:category/dept/:id" component={CategoryListPage}/>
                 <Route component={NoMatch}/>
