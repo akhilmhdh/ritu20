@@ -68,6 +68,7 @@ class CategoryListPage extends Component{
                           <div className={categoryListPageStyle.imgContainer}>
                             <img src={el.image} alt="images"/>
                           </div>
+                          <div className={this.state.events.body.preevent?categoryListPageStyle.preEventShow:categoryListPageStyle.preEventHide}>PRE-EVENT</div>
                          </div>
                          )
                      })}

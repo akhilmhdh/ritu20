@@ -47,7 +47,8 @@ class DeptListPage extends Component{
                 return(
                 <div className="swiper-slide" 
                 style={{backgroundImage:`url(/depicons/${el}.png)`}} 
-                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
+                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}
+                onSelect={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
                 </div>
                 )
               })}

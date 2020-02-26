@@ -1,6 +1,8 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Route,useLocation } from "react-router-dom";
 import { Provider } from "react-redux";
+
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Header from './pages/Header/header';
 import IndexPage from './pages/IndexPage/indexPage';
@@ -17,17 +19,36 @@ const Router=({store})=>{
     return(
         <Provider store={store}>
         <BrowserRouter>
-            <Header/>
-            <Switch>
-                <Route exact path="/" component={IndexPage}/>
-                <Route exact path="/about" component={AboutPage}/>
-                <Route exact path="/:category/dept" component={DeptListPage}/>
-                <Route path="/:category/dept/:id" component={CategoryListPage}/>
-                <Route component={NoMatch}/>
-            </Switch>
+        <Switch/>
+            <Route path="/:category/dept/:id" component={CategoryListPage}/>
+           <Route path="*">
+               <AnimationApp/>
+           </Route>
         </BrowserRouter>
     </Provider>
     )
 };
+
+const AnimationApp=()=>{
+    let location=useLocation()
+    return(
+        <div>
+            <Header/>
+            <TransitionGroup>
+                <CSSTransition
+                key={location.key}
+                classNames='fade'
+                timeout={300}>
+            <Switch location={location}>
+                <Route exact path="/" component={IndexPage}/>
+                <Route exact path="/about" component={AboutPage}/>
+                <Route exact path="/:category/dept" component={DeptListPage}/>
+                <Route component={NoMatch}/>
+            </Switch>
+            </CSSTransition>
+            </TransitionGroup>
+        </div>
+    )
+}
 
 export default Router;

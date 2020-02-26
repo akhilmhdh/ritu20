@@ -74,8 +74,12 @@
   padding-left: 1em;
 }
 .socialContainer img {
-  width: 30px;
   height: 30px;
+}
+.navFocusedItem {
+  font-weight: 900;
+  color: #45416e;
+  font-size: 1.5em;
 }
 
 @media screen and (max-device-width: 780px) {
@@ -97,9 +101,6 @@
     z-index: 10;
     color: transparent;
   }
-  .navItem {
-    color: inherit;
-  }
   .main li {
     padding: 1em;
     text-align: center;
@@ -107,13 +108,16 @@
     transition: 0.1s;
     font-family: "harabararegular";
     letter-spacing: 2px;
-    color: inherit;
     transition: 0.5s ease-in-out;
+    color: white;
   }
 
   .active {
     width: 250px;
-    color: #ebedec;
+  }
+  .navFocusedItem {
+    font-weight: 900;
+    font-size: 2em;
   }
   .navToggle {
     display: block;

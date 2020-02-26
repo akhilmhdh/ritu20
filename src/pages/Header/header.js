@@ -26,16 +26,20 @@ class Header extends Component{
             </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
                 <Link to="/about" className={headerStyle.navItem} >
-                    <li onClick={()=>this.setState({active:true})}>ABOUT</li>
+                    <li onClick={()=>this.setState({active:true})}
+                    className={window.location.pathname==="/about"?headerStyle.navFocusedItem:null}>ABOUT</li>
                 </Link>
                 <Link to="/events/dept" className={headerStyle.navItem}>
-                    <li onClick={()=>this.setState({active:true})}> EVENTS</li>
+                    <li onClick={()=>this.setState({active:true})}
+                className={window.location.pathname.slice(0,8)==="/events/"?headerStyle.navFocusedItem:null}> EVENTS</li>
                 </Link>
                 <Link to="/workshops/dept" className={headerStyle.navItem}>
-                    <li onClick={()=>this.setState({active:true})}>WORKSHOPS</li>
+                    <li onClick={()=>this.setState({active:true})}
+                    className={window.location.pathname.slice(0,11)==="/workshops/"?headerStyle.navFocusedItem:null}>WORKSHOPS</li>
                 </Link>
                 <Link to="/" className={headerStyle.navItem}>
-                <li onClick={()=>this.setState({active:true})}>TEAM</li>
+                <li onClick={()=>this.setState({active:true})}
+                 className={window.location.pathname==="/team"?headerStyle.navFocusedItem:null}>TEAM</li>
                 </Link>
                 <Link to="/" className={headerStyle.socialContainer+" "+headerStyle.navItem}>
                             <li>
