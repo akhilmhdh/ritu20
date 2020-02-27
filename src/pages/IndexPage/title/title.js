@@ -4,10 +4,15 @@ import titleStyle from './titleStyle.module.css'
 
 let i=0;
 let j=0;
+let k=0;
 let flag=0;
 
 const seasons=["AUTUMN","SUMMER","WINTER","SPRING"]
-const season=seasons[Math.floor(Math.random()*4)];
+const rand1=Math.floor(Math.random()*4)
+const season=seasons[rand1];
+seasons.splice(rand1,1);
+const rand2=Math.floor(Math.random()*3)
+const halfSeason=seasons[rand2].slice(0,seasons[rand2].length/2);
 const target="MANMADE"
 
 class Title extends Component{
@@ -28,19 +33,33 @@ class Title extends Component{
                 }
             this.setState({typing:temp})
             i++;
-            i===season.length?setTimeout(this.typingAnimation.bind(this),800):setTimeout(this.typingAnimation.bind(this),150)
+            i===season.length?setTimeout(this.typingAnimation.bind(this),1000):setTimeout(this.typingAnimation.bind(this),200)
             }
         else{
+            if(k<halfSeason.length*2){
+                let temp;
+                    if(halfSeason[k]!==undefined){
+                        temp=this.state.typing+halfSeason[k]
+                    }
+                    else{
+                    temp=halfSeason.slice(0,-(k+1-halfSeason.length))
+                    }
+                this.setState({typing:temp})
+                k++;
+                k===halfSeason.length?setTimeout(this.typingAnimation.bind(this),1000):setTimeout(this.typingAnimation.bind(this),150)
+                }
+                else{
             if(j<target.length){
                 let temp=this.state.typing+target[j]
                 this.setState({typing:temp})
                 j++;
-                setTimeout(this.typingAnimation.bind(this),200)
+                setTimeout(this.typingAnimation.bind(this),300)
             }
             else{
                 clearTimeout();
                 this.setState({typing:"MANMADE"})
             }
+        }
         }
         }
     componentDidMount(){

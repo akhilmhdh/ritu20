@@ -497,3 +497,24 @@ code {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+#navRotate {
+  filter: invert(0);
+}
+
+#navRotate #Line1,
+#navRotate #fLine {
+  opacity: 0;
+}
+#navRotate #LineH {
+  transform-style: preserve-3d;
+  transform-origin: top left;
+  transition: 0.5s;
+  transform: rotate(45deg) scale(1.2);
+}
+#navRotate #line2 {
+  transform-style: preserve-3d;
+  transform-origin: bottom left;
+  transition: 0.5s;
+  transform: rotate(-45deg) scale(1.2);
+}

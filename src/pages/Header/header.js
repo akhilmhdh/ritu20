@@ -15,13 +15,20 @@ class Header extends Component{
    render(){
     return(<div className={headerStyle.container}>
         <nav className={headerStyle.navContainer}>
-            <span className={headerStyle.navToggle} onClick={()=>this.setState({active:!this.state.active})}>
+            <span className={headerStyle.navToggle} 
+             id={this.state.active?null:"navRotate"}
+            onClick={()=>this.setState({active:!this.state.active})}>
                 <Hamburgur/>
             </span>
             <Link to="/" className={headerStyle.logo}>
-                <div>
-                    <div><img src="/img/ritu2.png" alt="logo"/></div>
-                   <div className={headerStyle.ritu}>Ritu<sup><sup>20</sup></sup></div>
+                <div><img src="/img/ritu2.png" alt="logo"/></div>
+                <div className={headerStyle.ritu}>
+                       <div>
+                            Ritu<sup>20</sup>
+                        </div>
+                        <div>
+                                Mar 19 - 22
+                        </div>
                 </div>
             </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
@@ -37,18 +44,22 @@ class Header extends Component{
                     <li onClick={()=>this.setState({active:true})}
                     className={window.location.pathname.slice(0,11)==="/workshops/"?headerStyle.navFocusedItem:null}>WORKSHOPS</li>
                 </Link>
-                <Link to="/" className={headerStyle.navItem}>
+                <Link to="/team" className={headerStyle.navItem}>
                 <li onClick={()=>this.setState({active:true})}
                  className={window.location.pathname==="/team"?headerStyle.navFocusedItem:null}>TEAM</li>
                 </Link>
-                <Link to="/" className={headerStyle.socialContainer+" "+headerStyle.navItem}>
+                <div className={headerStyle.socialContainer+" "+headerStyle.navItem}>
                             <li>
-                                <a href="#"><img src="/img/insta.png" alt="social"/></a>
-                                <a href="#"><img src="/img/facebook.png" alt="social"/></a>
+                                <a href="https://www.instagram.com/rit.utsav" target="_blank"
+                                rel="noopener noreferrer"><img src="/img/insta.png" alt="social"/></a>
+                                <a href="https://www.facebook.com/rituofficial" target="_blank"
+                                rel="noopener noreferrer"><img src="/img/facebook.png" alt="social"/></a>
                             </li>
-                </Link>
-                <span className={headerStyle.close} onClick={()=>this.setState({active:true})}></span>
+                </div>
             </ul>
+            <div
+                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
+                >MAR 19 - 22</div>
         </nav>
     </div>)
    }

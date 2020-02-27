@@ -1,0 +1,89 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: rgb(253, 135, 98);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 135, 98, 1) 0%,
+    rgba(233, 92, 85, 1) 50%,
+    rgba(214, 49, 72, 1) 100%
+  );
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subContainer {
+  width: 70vw;
+  height: 60vh;
+  margin-right: 5em;
+  background-color: #191828;
+  color: #efedef;
+  box-shadow: -1px 15px 30px -12px black;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 10px;
+  overflow: scroll;
+}
+.subContainer {
+  overflow: auto;
+}
+.subContainer::-webkit-scrollbar {
+  width: 0;
+}
+.subContainer {
+  overflow: -moz-scrollbars-none;
+}
+.subContainer {
+  -ms-overflow-style: none;
+}
+.title {
+  font-size: 52px;
+  font-weight: 900;
+  font-family: "harabararegular";
+  letter-spacing: 2px;
+}
+
+.imgContainerSet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em;
+}
+.cardImg img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.cards {
+  padding: 10px;
+}
+
+.cardText {
+  color: white;
+  font-family: "harabararegular";
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.cardText div {
+  padding: 5px;
+}
+
+@media screen and (max-device-width: 720px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .subContainer {
+    margin: 0;
+  }
+}

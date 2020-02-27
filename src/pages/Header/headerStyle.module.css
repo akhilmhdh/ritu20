@@ -40,11 +40,10 @@
   border-bottom: 0.4px solid #2b2844b6;
 }
 
-.logo div {
+.logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1.4em;
   font-family: "harabararegular";
   height: 80px;
 }
@@ -53,17 +52,29 @@
 }
 
 .logo div:last-child {
+  padding: 2px;
   letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+}
+.logo div:last-child div:first-child {
+  font-size: 1.6em;
+}
+
+.logo div:last-child div:last-child {
+  font-size: 1em;
 }
 
 .navToggle {
   display: none;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 10px;
   cursor: pointer;
   padding: 4px 8px 4px 8px;
   border-radius: 5px;
+  filter: invert(1);
+  transition: 0.5s;
 }
 
 .socialContainer {
@@ -80,6 +91,20 @@
   font-weight: 900;
   color: #45416e;
   font-size: 1.5em;
+}
+
+.date {
+  position: absolute;
+  top: 25px;
+  right: 18vw;
+  color: transparent;
+  font-family: "harabararegular";
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 10;
+}
+.dateActive {
+  color: white;
 }
 
 @media screen and (max-device-width: 780px) {
@@ -100,6 +125,15 @@
     justify-content: center;
     z-index: 10;
     color: transparent;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    opacity: 0;
+  }
+  .ritu div:last-child {
+    display: none;
+  }
+  .navItem {
+    color: inherit;
   }
   .main li {
     padding: 1em;
@@ -109,48 +143,24 @@
     font-family: "harabararegular";
     letter-spacing: 2px;
     transition: 0.5s ease-in-out;
-    color: white;
+    color: inherit;
   }
 
   .active {
-    width: 250px;
+    width: 50vw;
+    color: white;
+    opacity: 1;
   }
   .navFocusedItem {
     font-weight: 900;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .navToggle {
     display: block;
-    z-index: 5;
+    z-index: 15;
   }
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.7;
-    transition: 0.5s;
-  }
-  .close:hover {
-    opacity: 1;
-  }
-  .close:active {
-    transform: rotate(90deg);
-  }
-  .close:before,
-  .close:after {
-    position: absolute;
-    left: 15px;
-    content: " ";
-    height: 30px;
-    width: 5px;
-    background-color: white;
-  }
-  .close:before {
-    transform: rotate(45deg);
-  }
-  .close:after {
-    transform: rotate(-45deg);
+
+  .socialContainer li a img {
+    filter: invert(1);
   }
 }

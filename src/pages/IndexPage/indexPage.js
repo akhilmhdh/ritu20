@@ -2,7 +2,7 @@ import React from 'react'
 
 import Girl from './girl/girl'
 import Title from './title/title'
-import Date from './date/date'
+//import Date from './date/date'
 import Birds from './birds/birdsSVG'
 import Clouds from './clouds/clouds'
 
@@ -21,7 +21,6 @@ const IndexPage = ()=>{
         <Birds/>
         <Clouds/>
         <Title/>
-        <Date/>
     </div>);
 }
 
