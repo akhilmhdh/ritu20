@@ -19,7 +19,7 @@ class CategoryListPage extends Component{
     }
     componentDidMount(){
       const {match:{params:{id,category}}}=this.props;
-        axios.get(`http://test123.ritu20.com/${category}?dept=${id}`).then(res=>res.data)
+        axios.get(`https://fullpower.azurewebsites.net/${category}?dept=${id}`).then(res=>res.data)
         .catch((err)=>{
           console.log(err);
         })
