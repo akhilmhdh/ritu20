@@ -23,7 +23,7 @@
 }
 .tabContainer {
   position: relative;
-  top: 10%;
+  top: 5%;
   left: 0;
   margin: auto;
   width: 80vw;
@@ -68,13 +68,18 @@
 .submitBtn {
   margin: 20px 0 20px 0;
 }
-.tab1Container a {
+.submitBtn a {
   text-decoration: none;
   background-color: green;
+  cursor: pointer;
   color: #efedef;
   padding: 10px;
   box-shadow: -1px 15px 30px -12px black;
   border-radius: 5px;
+}
+.submitBtnDisable a {
+  background-color: rgb(2, 195, 2);
+  cursor: none;
 }
 .price,
 .time {
