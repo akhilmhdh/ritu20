@@ -10,7 +10,7 @@ import categoryListPageStyle from './categoryListPageStyle.module.css';
 import Arrow from '../utils/arrow-back/arrow';
 import RituSpinner from '../utils/ritu-spinner/rituSpinner';
 
-
+const APIurl="http://rituback.azurewebsites.net/";
 
 class CategoryListPage extends Component{
     constructor(props){
@@ -19,7 +19,7 @@ class CategoryListPage extends Component{
     }
     componentDidMount(){
       const {match:{params:{id,category}}}=this.props;
-        axios.get(`https://fullpower.azurewebsites.net/${category}?dept=${id}`).then(res=>res.data)
+        axios.get(`${APIurl}${category}?dept=${id}`).then(res=>res.data)
         .catch((err)=>{
           console.log(err);
         })
