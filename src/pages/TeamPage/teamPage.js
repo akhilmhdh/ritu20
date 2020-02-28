@@ -35,9 +35,6 @@ const TeamPage=()=>{
                 <Template src="https://avatars2.githubusercontent.com/u/48565910?v=4"
                 href="https://github.com/ghubofsmaran" name="Smaran Ponnapan" 
                 role="UI/UX Designer"/>
-                <Template src="https://avatars0.githubusercontent.com/u/33503690?v=4"
-                href="https://github.com/ko200" name="Vishnu KO" 
-                role="UI Designer"/>
         </div>
         </div>
         <Arrow path="/"/>

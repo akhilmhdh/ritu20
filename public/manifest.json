@@ -1,25 +1,24 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
+  "short_name": "RITU 20",
+  "name": "RIT Tech Fest 2020, Kerala",
+  "icons": [{
+      "src": "/img/ritu2.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "/img/ritu2.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "/img/ritu2.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#221e33",
   "background_color": "#ffffff"
 }
