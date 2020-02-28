@@ -8,13 +8,16 @@ const cvtJSON2HTML=(x)=>{
 }
 
 const Tab1=(props)=>{
-    const flag=(props.seats<=0 && props.available<=0)?null:props.mail
+    const url=(props.seats<=0 && props.available<=0)?null:props.mail
     
     return(<div className={eventDetailsStyle.tab1Container}>
-        <div className={eventDetailsStyle.submitBtn}>
-        <a href={flag}
+        <div className={url===undefined?eventDetailsStyle.submitBtn:
+            `${eventDetailsStyle.submitBtn} ${eventDetailsStyle.submitBtnDisable}`}>
+        <a href={url}
         target="_blank"
-        rel="noopener noreferrer">{props.online?"Submit Your Entry":"Register Now"}</a>
+        rel="noopener noreferrer">
+            {props.online?"Submit Your Entry":"Register Now"}
+        </a>
         </div>
         <div className={eventDetailsStyle.price}>
             PRIZE: {props.prize}

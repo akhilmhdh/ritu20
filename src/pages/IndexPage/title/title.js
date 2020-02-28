@@ -5,7 +5,6 @@ import titleStyle from './titleStyle.module.css'
 let i=0;
 let j=0;
 let k=0;
-let flag=0;
 
 const seasons=["AUTUMN","SUMMER","WINTER","SPRING"]
 const rand1=Math.floor(Math.random()*4)

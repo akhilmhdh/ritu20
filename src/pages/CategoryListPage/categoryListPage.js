@@ -20,6 +20,14 @@ class CategoryListPage extends Component{
     componentDidMount(){
       const {match:{params:{id,category}}}=this.props;
         axios.get(`http://test123.ritu20.com/${category}?dept=${id}`).then(res=>res.data)
+        .catch((err)=>{
+          if(err.message==="Network Error"){
+            alert("Kindly check network connectivity and refresh the page");
+        }
+          else{
+            alert("Sorry our server is down");
+          }
+        })
         .then((data)=>{
             this.setState({events:data});
             // eslint-disable-next-line no-unused-vars
