@@ -1,7 +1,5 @@
 import React from 'react';
 
-import avatar from './girl.module.css'
-
 const Girl =()=>{
     return(
       <svg id="Layer_1" data-name="Layer 1" width="373.6" height="317.98" viewBox="0 0 855.32 676.01">

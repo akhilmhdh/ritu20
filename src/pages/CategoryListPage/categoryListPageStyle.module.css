@@ -1,8 +1,3 @@
-.container div:first-child {
-  position: relative;
-  top: 0;
-  left: 0;
-}
 .container {
   width: 100vw;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
@@ -23,8 +18,14 @@
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
+}
+
+.container div:first-child {
+  position: relative;
+  top: 0;
+  left: 3px;
 }
 
 .pagination span {
@@ -43,6 +44,9 @@
   box-shadow: -1px 15px 30px -12px black;
   width: 300px;
   height: auto;
+}
+.colLogp div {
+  position: relative;
 }
 
 .spinnerContainer {

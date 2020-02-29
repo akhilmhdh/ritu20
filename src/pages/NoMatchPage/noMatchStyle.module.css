@@ -1,8 +1,7 @@
 .container {
-  padding-top: 80px;
   width: 100vw;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc((var(--vh, 1vh) * 100) - 80px);
+  height: calc(var(--vh, 1vh) * 100);
   background: rgb(253, 135, 98);
   background: linear-gradient(
     180deg,
@@ -10,21 +9,13 @@
     rgba(233, 92, 85, 1) 50%,
     rgba(214, 49, 72, 1) 100%
   );
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-}
-.container div:nth-child(1) {
-  position: relative;
-  align-self: flex-start;
-  left: 5px;
-}
-.container div:nth-child(3) {
-  position: relative;
-}
-.deptIconIndex {
-  width: 15px;
-  height: 15px;
-  border-radius: 10px;
+  font-family: "Headliner";
+  font-size: 34px;
 }
