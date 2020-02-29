@@ -90,7 +90,9 @@
   z-index: 15;
   position: relative;
   left: 8vw;
-  transition: opacity 2s;
+  transition-delay: 0.1s;
+  transition-property: opacity, color;
+  transition-duration: 0.5s;
 }
 
 .dateActive {
@@ -98,7 +100,7 @@
   opacity: 1;
 }
 
-@media screen and (max-device-width: 780px) {
+@media screen and (max-device-width: 720px) {
   .navContainer {
     padding: 10px;
     padding-left: 0;
@@ -111,7 +113,8 @@
     width: 0;
     position: fixed;
     height: 99vh;
-    top: 0.5vh;
+    height: calc(var(--vh, 1vh) * 99);
+    top: calc(var(--vh, 1vh) * 0.5);
     right: 0;
     background-color: #262630;
     overflow-x: hidden;
@@ -134,7 +137,6 @@
   }
   .main li {
     font-size: 23px;
-    transition: 0.1s;
     transition: 0.5s ease-in-out;
     color: inherit;
     font-weight: bold;
@@ -150,7 +152,8 @@
   }
   .navFocusedItem {
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 2em;
+    color: black;
   }
   .navToggle {
     display: block;
@@ -159,20 +162,13 @@
   .socialContainer {
     width: 50vw;
     position: absolute;
-    bottom: 5vh;
+    bottom: calc(var(--vh, 1vh) * 5);
     display: flex;
     justify-content: center;
     align-self: center;
   }
   .socialContainer li a img {
     filter: invert(1);
-  }
-  .blurContainer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    content: "";
-    filter: blur(2px);
   }
 }
 

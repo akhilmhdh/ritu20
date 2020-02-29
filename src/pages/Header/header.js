@@ -33,19 +33,19 @@ class Header extends Component{
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
                 <Link to="/about" className={headerStyle.navItem} >
                     <li onClick={()=>this.setState({active:true})}
-                    className={window.location.pathname==="/about"?headerStyle.navFocusedItem:null}>ABOUT</li>
+                    style={window.location.pathname==="/about"?{opacity:"0.5"}:null}>ABOUT</li>
                 </Link>
                 <Link to="/events/dept" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}
-                className={window.location.pathname.slice(0,8)==="/events/"?headerStyle.navFocusedItem:null}> EVENTS</li>
+                style={window.location.pathname.slice(0,8)==="/events/"?{opacity:"0.5"}:null}> EVENTS</li>
                 </Link>
                 <Link to="/workshops/dept" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}
-                    className={window.location.pathname.slice(0,11)==="/workshops/"?headerStyle.navFocusedItem:null}>WORKSHOPS</li>
+                      style={window.location.pathname.slice(0,11)==="/workshops/"?{opacity:"0.5"}:null}>WORKSHOPS</li>
                 </Link>
                 <Link to="/team" className={headerStyle.navItem}>
                 <li onClick={()=>this.setState({active:true})}
-                 className={window.location.pathname==="/team"?headerStyle.navFocusedItem:null}>TEAM</li>
+                 className={window.location.pathname==="/team"?{opacity:"0.5"}:null}>TEAM</li>
                 </Link>
                 <div className={headerStyle.socialContainer+" "+headerStyle.navItem}>
                             <li>

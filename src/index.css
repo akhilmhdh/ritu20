@@ -43,6 +43,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "poppins";
+  src: url("/fonts/poppins/poppins-regular-webfont.woff2") format("woff2"),
+    url("/fonts/poppins/poppins-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 #root,
 html {
@@ -360,7 +368,7 @@ html {
 .swiper-container {
   width: 100vw;
   height: 75vh;
-  padding-top: 100px;
+  height: calc(var(--vh, 1vh) * 75);
 }
 .swiper-slide {
   background-position: center;
@@ -505,6 +513,17 @@ html {
 
 #navRotate #hamburgur {
   fill: white;
+}
+#hamburgur #line1 {
+  transform: rotate(0);
+  transform: rotate(0);
+  transition: 0.5s;
+}
+
+#hamburgur #line3 {
+  transform-origin: center;
+  transform: rotate(0);
+  transition: 0.5s;
 }
 
 #navRotate #hamburgur #line1 {
