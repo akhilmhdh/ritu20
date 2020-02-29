@@ -10,11 +10,8 @@ import DeptListPage from './pages/DeptListPage/deptListPage';
 import CategoryListPage from './pages/CategoryListPage/categoryListPage';
 import AboutPage from './pages/AboutPage/about';
 import TeamPage from './pages/TeamPage/teamPage';
+import NoMatch from './pages/NoMatchPage/noMatch'
 
-
-const NoMatch=()=>{
-    return(<div>No Match</div>);
-}
 
 const Router=({store})=>{
     return(

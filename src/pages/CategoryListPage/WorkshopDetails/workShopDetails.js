@@ -68,7 +68,8 @@ class workShopDetails extends Component{
                <div className={workShopDetailsStyle.blurContainer}></div>
                 <div className={workShopDetailsStyle.tabContainer}>
                     <div className={workShopDetailsStyle.arrow}
-                    onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
+                    onClick={()=>{this.props.click();
+                        this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
                         <span>&#10006;</span></div>
                     <div className={workShopDetailsStyle.tabs}>
                         <div id="0" onClick={this.onClick} 

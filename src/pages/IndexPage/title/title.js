@@ -11,7 +11,7 @@ const rand1=Math.floor(Math.random()*4)
 const season=seasons[rand1];
 seasons.splice(rand1,1);
 const rand2=Math.floor(Math.random()*3)
-const halfSeason=seasons[rand2].slice(0,seasons[rand2].length/2);
+const halfSeason=seasons[rand2].slice(0,4);
 const target="MANMADE"
 
 class Title extends Component{
@@ -44,7 +44,7 @@ class Title extends Component{
                     }
                 this.setState({typing:temp})
                 k++;
-                k===halfSeason.length?setTimeout(this.typingAnimation.bind(this),1000):setTimeout(this.typingAnimation.bind(this),150)
+                k===halfSeason.length?setTimeout(this.typingAnimation.bind(this),800):setTimeout(this.typingAnimation.bind(this),150)
                 }
                 else{
                     if(j===0){this.setState({color:true})};

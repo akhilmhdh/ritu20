@@ -9,15 +9,17 @@ import EventDetails from './EventDetails/eventDetails'
 import categoryListPageStyle from './categoryListPageStyle.module.css';
 import Arrow from '../utils/arrow-back/arrow';
 import RituSpinner from '../utils/ritu-spinner/rituSpinner';
+import CollegeLogo from '../utils/college-logo/collegeLogo';
 
 const APIurl="https://fullpower.azurewebsites.net/";
 
 class CategoryListPage extends Component{
     constructor(props){
         super(props);
-        this.state={events:null}
+        this.state={events:null,click:false};
     }
     componentDidMount(){
+      this.setState({click:false})
       const {match:{params:{id,category}}}=this.props;
         axios.get(`${APIurl}${category}?dept=${id}`).then(res=>res.data)
         .catch((err)=>{
@@ -56,7 +58,7 @@ class CategoryListPage extends Component{
              return <div className={categoryListPageStyle.spinnerContainer}><RituSpinner/></div>}
         return(
             <div className={categoryListPageStyle.container}>
-              <Arrow path={`/${this.props.match.params.category}/dept`}/>
+              <Arrow path={`/${this.props.match.params.category}/dept`} click={this.state.click}/>
               <div className="swiper-container">
                 <div className="swiper-wrapper">
                      {this.state.events.head.map((el,index)=>{
@@ -66,6 +68,7 @@ class CategoryListPage extends Component{
                            const url=this.props.match.params.category==="events"
                            ?`${this.props.match.url}/${index}/eventDetails`
                            :`${this.props.match.url}/${index}/workShopDetails`;
+                           this.setState({click:true});
                            this.props.history.push(url)
                          }}
                         >
@@ -81,10 +84,15 @@ class CategoryListPage extends Component{
               <div className="swiper-button-next"></div>
               <div className="swiper-button-prev"></div>
             </div>
+            <div className={categoryListPageStyle.colLogo}>
+                <CollegeLogo/>
+            </div>
             <Route path={`${this.props.match.path}/:index/eventDetails`} render={
-              (props)=><EventDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
+              (props)=><EventDetails {...props} head={this.state.events.head} body={this.state.events.body}
+              click={()=>{this.setState({click:false})}}/>}/>
             <Route path={`${this.props.match.path}/:index/workshopDetails`} render={
-              (props)=><WorkShopDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
+              (props)=><WorkShopDetails {...props} head={this.state.events.head} body={this.state.events.body}
+              click={()=>{this.setState({click:false})}}/>}/>
           </div>
         )
        }

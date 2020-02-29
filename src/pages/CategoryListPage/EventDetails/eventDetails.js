@@ -93,7 +93,8 @@ class EventDetails extends Component{
                <div className={eventDetailsStyle.blurContainer}></div>
                 <div className={eventDetailsStyle.tabContainer}>
                     <div className={eventDetailsStyle.arrow}
-                    onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
+                    onClick={()=>{this.props.click();
+                        this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
                         <span>&#10006;</span></div>
                     <div className={eventDetailsStyle.tabs}>
                         <div id="0" onClick={this.onClick} 
