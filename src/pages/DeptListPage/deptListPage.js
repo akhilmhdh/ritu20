@@ -46,10 +46,15 @@ class DeptListPage extends Component{
               <div className="swiper-wrapper">
               {DeptList.map((el)=>{
                 return(
-                <div className="swiper-slide" 
-                style={{backgroundImage:`url(/depicons/${el}.png)`}} 
+                <div className={`swiper-slide ${deptListPageStyle.img_cards}`}
                 onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}
                 onSelect={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
+                  <div className={deptListPageStyle.imgContainer}>
+                      <img src={`/depicons/${el}.png`} alt="images"/>
+                  </div> 
+                  <div className={deptListPageStyle.textContainer}>
+                    {el}
+                  </div>   
                 </div>
                 )
               })}
