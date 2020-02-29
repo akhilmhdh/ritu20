@@ -19,8 +19,8 @@ const Router=({store})=>{
         <BrowserRouter>
         <Switch/>
             <Route path="/:category/dept/:id" component={CategoryListPage}/>
-            <Route path="*">
-            <AnimationApp/>
+            <Route path="/">
+                <AnimationApp/>
            </Route>
         </BrowserRouter>
     </Provider>
@@ -41,7 +41,7 @@ const AnimationApp=()=>{
                 <Route exact path="/" component={IndexPage}/>
                 <Route exact path="/about" component={AboutPage}/>
                 <Route exact path="/team" component={TeamPage}/>
-                <Route exact path="/:category/dept" component={DeptListPage}/>
+                <Route path="/:category/dept" component={DeptListPage}/>
                 <Route component={NoMatch}/>
             </Switch>
             </CSSTransition>
