@@ -4,3 +4,7 @@
   width: 100vw;
   height: 50vh;
 }
+.container svg {
+  width: inherit;
+  height: inherit;
+}

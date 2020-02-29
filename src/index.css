@@ -360,6 +360,11 @@ html {
   height: 75vh;
   height: calc(var(--vh, 1vh) * 75);
 }
+.swiper-container-2 {
+  width: 100vw;
+  height: 75vh;
+  height: calc(var(--vh, 1vh) * 75);
+}
 .swiper-slide {
   background-position: center;
   background-size: 100% 100%;

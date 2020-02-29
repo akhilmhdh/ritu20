@@ -3,11 +3,11 @@ import React from 'react';
 const Birds=()=>{
     return(
     <div>
-        <div class="bird-container">
-            <div class="bird"></div>
+        <div className="bird-container">
+            <div className="bird"></div>
         </div>
-        <div class="bird-container-two">
-            <div class="bird-two"></div>
+        <div className="bird-container-two">
+            <div className="bird-two"></div>
         </div>    
     </div>
     )
