@@ -20,6 +20,9 @@ class CategoryListPage extends Component{
     componentDidMount(){
       const {match:{params:{id,category}}}=this.props;
         axios.get(`${APIurl}${category}?dept=${id}`).then(res=>res.data)
+        .catch((err)=>{
+          console.log(err);
+        })
         .then((data)=>{
             this.setState({events:data});
             // eslint-disable-next-line no-unused-vars
