@@ -15,22 +15,21 @@ class Header extends Component{
    render(){
     return(<div className={headerStyle.container}>
         <nav className={headerStyle.navContainer}>
+            <Link to="/" className={headerStyle.logo}>
+                <div><img src="/img/ritu2.png" alt="logo"/></div>
+                <div className={headerStyle.ritu}>
+                            Ritu<sup><sup>20</sup></sup>
+                </div>
+            </Link>
+            <div
+                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
+                >MAR 19 <span style={{fontFamily:"harabararegular"}}>-</span> Mar 22
+            </div>
             <span className={headerStyle.navToggle} 
              id={this.state.active?null:"navRotate"}
             onClick={()=>this.setState({active:!this.state.active})}>
                 <Hamburgur/>
             </span>
-            <Link to="/" className={headerStyle.logo}>
-                <div><img src="/img/ritu2.png" alt="logo"/></div>
-                <div className={headerStyle.ritu}>
-                       <div>
-                            Ritu<sup>20</sup>
-                        </div>
-                        <div>
-                                Mar 19 - 22
-                        </div>
-                </div>
-            </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
                 <Link to="/about" className={headerStyle.navItem} >
                     <li onClick={()=>this.setState({active:true})}
@@ -57,9 +56,6 @@ class Header extends Component{
                             </li>
                 </div>
             </ul>
-            <div
-                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
-                >MAR 19 - 22</div>
         </nav>
     </div>)
    }

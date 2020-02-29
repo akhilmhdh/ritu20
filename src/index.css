@@ -25,23 +25,34 @@
       format("svg"); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: "helveticaregular";
+  src: url("/fonts/helvetica_33244fbeea10f093ae87de7a994c3697-webfont.woff2")
+      format("woff2"),
+    url("/fonts/helvetica_33244fbeea10f093ae87de7a994c3697-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "headliner";
+  src: url("/fonts/headliner/headlinerno.45_demo-webfont.woff2") format("woff2"),
+    url("/fonts/headlinerno.45_demo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 #root,
 html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "helveticaregular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .bird {
@@ -470,18 +481,6 @@ code {
   }
 }
 
-@media screen and (max-device-width: 1024px) {
-  .swiper-button-next {
-    display: none;
-  }
-  .swiper-button-prev {
-    display: none;
-  }
-  #cloud1 {
-    display: none;
-  }
-}
-
 .fade-enter {
   opacity: 0.01;
 }
@@ -498,23 +497,36 @@ code {
   transition: opacity 300ms ease-in;
 }
 
-#navRotate {
-  filter: invert(0);
+#hamburgur {
+  width: 31px;
+  height: 31px;
+  fill: #262630;
 }
 
-#navRotate #Line1,
-#navRotate #fLine {
-  opacity: 0;
+#navRotate #hamburgur {
+  fill: white;
 }
-#navRotate #LineH {
-  transform-style: preserve-3d;
-  transform-origin: top left;
+
+#navRotate #hamburgur #line1 {
+  transform-origin: center;
+  transform: rotate(45deg);
   transition: 0.5s;
-  transform: rotate(45deg) scale(1.2);
 }
-#navRotate #line2 {
-  transform-style: preserve-3d;
-  transform-origin: bottom left;
+
+#navRotate #hamburgur #line3 {
+  transform-origin: center;
+  transform: rotate(-45deg);
   transition: 0.5s;
-  transform: rotate(-45deg) scale(1.2);
+}
+
+@media screen and (max-device-width: 1024px) {
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+  #cloud1 {
+    display: none;
+  }
 }

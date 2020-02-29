@@ -21,6 +21,8 @@ const IndexPage = ()=>{
         <Birds/>
         <Clouds/>
         <Title/>
+        <div className={styles.util}
+        >rit.utsav</div>
     </div>);
 }
 

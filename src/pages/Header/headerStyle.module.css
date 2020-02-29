@@ -1,8 +1,9 @@
 .navContainer {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0;
   align-items: center;
+  padding-bottom: 0;
+  padding: 5px;
   height: 60px;
   font-size: 1em;
   background-color: transparent;
@@ -27,13 +28,14 @@
   padding: 1em;
   list-style-type: none;
   transition: 0.1s;
-  font-family: "harabararegular";
-  letter-spacing: 2px;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .navItem,
 .logo {
   text-decoration: none;
-  color: #2b2844;
+  color: #262630;
   cursor: pointer;
 }
 .main li:hover {
@@ -48,32 +50,20 @@
   height: 80px;
 }
 .logo img {
-  width: 60px;
+  width: 53px;
+  height: 80px;
 }
-
-.logo div:last-child {
-  padding: 2px;
+.ritu {
+  font-size: 25px;
   letter-spacing: 2px;
-  display: flex;
-  flex-direction: column;
-}
-.logo div:last-child div:first-child {
-  font-size: 1.6em;
-}
-
-.logo div:last-child div:last-child {
-  font-size: 1em;
+  padding-bottom: 0.5em;
 }
 
 .navToggle {
   display: none;
-  position: absolute;
-  top: 20px;
-  right: 10px;
   cursor: pointer;
   padding: 4px 8px 4px 8px;
   border-radius: 5px;
-  filter: invert(1);
   transition: 0.5s;
 }
 
@@ -94,56 +84,63 @@
 }
 
 .date {
-  position: absolute;
-  top: 25px;
-  right: 18vw;
-  color: transparent;
-  font-family: "harabararegular";
+  color: #262630;
+  font-family: "headliner";
   font-size: 20px;
-  font-weight: 900;
-  z-index: 10;
+  z-index: 15;
+  position: relative;
+  left: 8vw;
+  transition: opacity 2s;
 }
+
 .dateActive {
   color: white;
+  opacity: 1;
 }
 
 @media screen and (max-device-width: 780px) {
+  .navContainer {
+    padding: 10px;
+    padding-left: 0;
+  }
+  .logo div:last-child div:first-child {
+    font-size: 2em;
+  }
   .main {
     list-style-type: none;
-    padding: 0;
     width: 0;
     position: fixed;
-    height: 100vh;
-    top: 0;
+    height: 99vh;
+    top: 0.5vh;
     right: 0;
-    background-color: black;
+    background-color: #262630;
     overflow-x: hidden;
     transition: 0.5s;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     z-index: 10;
     color: transparent;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     opacity: 0;
-  }
-  .ritu div:last-child {
-    display: none;
+    padding: 0;
+    padding-right: 10px;
   }
   .navItem {
     color: inherit;
   }
   .main li {
-    padding: 1em;
-    text-align: center;
-    margin: 1em auto;
+    font-size: 23px;
     transition: 0.1s;
-    font-family: "harabararegular";
-    letter-spacing: 2px;
     transition: 0.5s ease-in-out;
     color: inherit;
+    font-weight: bold;
+    margin-left: 0;
+    padding-top: 5px;
+    padding-bottom: 12px;
   }
 
   .active {
@@ -159,8 +156,28 @@
     display: block;
     z-index: 15;
   }
-
+  .socialContainer {
+    width: 50vw;
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
   .socialContainer li a img {
     filter: invert(1);
+  }
+  .blurContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    filter: blur(2px);
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  .main li {
+    font-size: 19px;
   }
 }
