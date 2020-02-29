@@ -10,7 +10,7 @@ import categoryListPageStyle from './categoryListPageStyle.module.css';
 import Arrow from '../utils/arrow-back/arrow';
 import RituSpinner from '../utils/ritu-spinner/rituSpinner';
 
-const APIurl="http://rituback.azurewebsites.net/";
+const APIurl="https://fullpower.azurewebsites.net/";
 
 class CategoryListPage extends Component{
     constructor(props){
