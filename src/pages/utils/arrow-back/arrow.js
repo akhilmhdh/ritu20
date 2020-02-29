@@ -5,9 +5,11 @@ import arrowStyle from './arrowStyle.module.css'
 
 const Arrow=(props)=>{
     return(
+        <div>
         <Link to={props.path}>
             <div className={arrowStyle.container}></div>
         </Link>
+        </div>
     )
 }
 

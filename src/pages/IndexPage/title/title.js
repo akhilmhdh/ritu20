@@ -17,8 +17,7 @@ const target="MANMADE"
 class Title extends Component{
     constructor(props){
         super(props);
-        this.state={typing:" "}
-        this.timer=null;
+        this.state={typing:" ",color:false,symbol:"|"}
         this.typingAnimation=this.typingAnimation.bind(this);
     }
     typingAnimation(){
@@ -48,6 +47,7 @@ class Title extends Component{
                 k===halfSeason.length?setTimeout(this.typingAnimation.bind(this),1000):setTimeout(this.typingAnimation.bind(this),150)
                 }
                 else{
+                    if(j===0){this.setState({color:true})};
             if(j<target.length){
                 let temp=this.state.typing+target[j]
                 this.setState({typing:temp})
@@ -56,7 +56,7 @@ class Title extends Component{
             }
             else{
                 clearTimeout();
-                this.setState({typing:"MANMADE"})
+                this.setState({typing:"MANMADE",symbol:"."})
             }
         }
         }
@@ -70,7 +70,10 @@ class Title extends Component{
         <div className={titleStyle.titleContainer}>
             <div className={titleStyle.titleOne}>THE BEST</div>
             <div className={titleStyle.titleTwo}>SEASON IS</div>
-            <div className={titleStyle.titleThree} >{this.state.typing}<span className={titleStyle.blink}>|</span></div>
+            <div className={this.state.color?`${titleStyle.titleThree} ${titleStyle.titleThreeAddon}`:titleStyle.titleThree}
+            >{this.state.typing}
+                <span className={this.state.symbol==="|"?titleStyle.blink:`${titleStyle.blink} ${titleStyle.blinkRed}`}>{this.state.symbol}</span>
+            </div>
         </div>
         )
   }

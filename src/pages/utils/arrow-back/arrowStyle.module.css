@@ -1,11 +1,10 @@
 .container {
   width: 30px;
-  height: 25px;
+  height: 31px;
   background-image: url("/img/arrow-back.png");
   position: absolute;
   top: 15%;
   left: 5%;
-  filter: invert(1);
   background-size: 100% 100%;
   cursor: pointer;
   z-index: 20;

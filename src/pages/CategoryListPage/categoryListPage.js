@@ -56,6 +56,7 @@ class CategoryListPage extends Component{
              return <div className={categoryListPageStyle.spinnerContainer}><RituSpinner/></div>}
         return(
             <div className={categoryListPageStyle.container}>
+              <Arrow path={`/${this.props.match.params.category}/dept`}/>
               <div className="swiper-container">
                 <div className="swiper-wrapper">
                      {this.state.events.head.map((el,index)=>{
@@ -84,7 +85,6 @@ class CategoryListPage extends Component{
               (props)=><EventDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
             <Route path={`${this.props.match.path}/:index/workshopDetails`} render={
               (props)=><WorkShopDetails {...props} head={this.state.events.head} body={this.state.events.body}/>}/>
-          <Arrow path={`/${this.props.match.params.category}/dept`}/>
           </div>
         )
        }

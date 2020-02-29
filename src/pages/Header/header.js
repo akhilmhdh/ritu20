@@ -15,38 +15,37 @@ class Header extends Component{
    render(){
     return(<div className={headerStyle.container}>
         <nav className={headerStyle.navContainer}>
+            <Link to="/" className={headerStyle.logo}>
+                <div><img src="/img/ritu2.png" alt="logo"/></div>
+                <div className={headerStyle.ritu}>
+                            Ritu<sup><sup>20</sup></sup>
+                </div>
+            </Link>
+            <div
+                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
+                >MAR 19 <span style={{fontFamily:"harabararegular"}}>-</span> Mar 22
+            </div>
             <span className={headerStyle.navToggle} 
              id={this.state.active?null:"navRotate"}
             onClick={()=>this.setState({active:!this.state.active})}>
                 <Hamburgur/>
             </span>
-            <Link to="/" className={headerStyle.logo}>
-                <div><img src="/img/ritu2.png" alt="logo"/></div>
-                <div className={headerStyle.ritu}>
-                       <div>
-                            Ritu<sup>20</sup>
-                        </div>
-                        <div>
-                                Mar 19 - 22
-                        </div>
-                </div>
-            </Link>
             <ul className={this.state.active?headerStyle.main:`${headerStyle.main} ${headerStyle.active}`}>
                 <Link to="/about" className={headerStyle.navItem} >
                     <li onClick={()=>this.setState({active:true})}
-                    className={window.location.pathname==="/about"?headerStyle.navFocusedItem:null}>ABOUT</li>
+                    style={window.location.pathname==="/about"?{opacity:"0.5"}:null}>ABOUT</li>
                 </Link>
                 <Link to="/events/dept" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}
-                className={window.location.pathname.slice(0,8)==="/events/"?headerStyle.navFocusedItem:null}> EVENTS</li>
+                style={window.location.pathname.slice(0,8)==="/events/"?{opacity:"0.5"}:null}> EVENTS</li>
                 </Link>
                 <Link to="/workshops/dept" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}
-                    className={window.location.pathname.slice(0,11)==="/workshops/"?headerStyle.navFocusedItem:null}>WORKSHOPS</li>
+                      style={window.location.pathname.slice(0,11)==="/workshops/"?{opacity:"0.5"}:null}>WORKSHOPS</li>
                 </Link>
                 <Link to="/team" className={headerStyle.navItem}>
                 <li onClick={()=>this.setState({active:true})}
-                 className={window.location.pathname==="/team"?headerStyle.navFocusedItem:null}>TEAM</li>
+                 className={window.location.pathname==="/team"?{opacity:"0.5"}:null}>TEAM</li>
                 </Link>
                 <div className={headerStyle.socialContainer+" "+headerStyle.navItem}>
                             <li>
@@ -57,9 +56,6 @@ class Header extends Component{
                             </li>
                 </div>
             </ul>
-            <div
-                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
-                >MAR 19 - 22</div>
         </nav>
     </div>)
    }

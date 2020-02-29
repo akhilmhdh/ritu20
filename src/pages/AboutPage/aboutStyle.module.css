@@ -18,29 +18,19 @@
 }
 
 .subContainer {
-  width: 70vw;
-  height: 60vh;
+  width: 80vw;
+  height: 70vh;
+  height: calc(var(--vh, 1vh) * 70);
   margin-right: 5em;
   background-color: #191828;
   color: #efedef;
   box-shadow: -1px 15px 30px -12px black;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  justify-content: space-evenly;
+  padding: 20px 20px 30px 60px;
   border-radius: 10px;
-  overflow: scroll;
-}
-.subContainer {
-  overflow: auto;
-}
-.subContainer::-webkit-scrollbar {
-  width: 0;
-}
-.subContainer {
-  overflow: -moz-scrollbars-none;
-}
-.subContainer {
-  -ms-overflow-style: none;
+  overflow: hidden;
 }
 
 .title {
@@ -48,14 +38,31 @@
   font-weight: 900;
   font-family: "harabararegular";
   letter-spacing: 2px;
+  padding-bottom: 10px;
 }
 .writeUpContainer {
+  font-family: "poppins";
   font-size: 2.5vh;
+  overflow-y: scroll;
+}
+.writeUpContainer::-webkit-scrollbar {
+  width: 0;
+}
+.writeUpContainer {
+  overflow: -moz-scrollbars-none;
+}
+.writeUpContainer {
+  -ms-overflow-style: none;
+}
+
+.writeUpContainer p {
+  margin: 0;
+  line-height: 1.5;
 }
 .boldItems {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: inherit;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +71,7 @@
 .boldItem {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .boldItem1 {
@@ -94,6 +101,13 @@
   }
   .subContainer {
     margin-right: 0;
+    width: 75vw;
+  }
+  .boldItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .boldItem {
     display: flex;

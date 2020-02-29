@@ -41,6 +41,7 @@ class DeptListPage extends Component{
      render(){
       return(
         <div className={deptListPageStyle.container}>
+            <Arrow path="/"/>
             <div className="swiper-container">
               <div className="swiper-wrapper">
               {DeptList.map((el)=>{
@@ -54,10 +55,9 @@ class DeptListPage extends Component{
               })}
             </div>
             <div className="swiper-pagination"></div>
-            <div className="swiper-button-next"></div>
-            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next" style={{position:"absolute"}}></div>
+            <div className="swiper-button-prev"  style={{position:"absolute"}}></div>
           </div>
-          <Arrow path="/"/>
           <CollegeLogo/>
         </div>
       )

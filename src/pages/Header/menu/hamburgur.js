@@ -1,9 +1,11 @@
 import React from 'react'
 
 const Hamburgur =()=>{
-    return(<svg id="hamburgur" width="24" height="24" viewBox="0 0 24 24">
-        <title>menu</title>
-        <path id="LineH" d="M22.46,4.08H1.54A1.54,1.54,0,0,1,1.54,1H22.46a1.54,1.54,0,0,1,0,3.08Z" fill="#ebedec"/><path id="Line1" d="M13.85,13.31H1.54a1.54,1.54,0,0,1,0-3.08H13.85a1.54,1.54,0,0,1,0,3.08Z" fill="#ebedec"/><path id="fLine" d="M22.46,13.31H20a1.54,1.54,0,1,1,0-3.08h2.46a1.54,1.54,0,1,1,0,3.08Z" fill="#ebedec" opacity="0.7"/><path id="line2" d="M22.46,22.54H1.54a1.54,1.54,0,1,1,0-3.08H22.46a1.54,1.54,0,0,1,0,3.08Z" fill="#ebedec"/></svg>)
+    return(
+        <svg id="hamburgur" viewBox="0 0 512 512">
+            <title>menu</title>
+            <path d="M256,512C114.84,512,0,397.16,0,256S114.84,0,256,0,512,114.84,512,256,397.16,512,256,512Zm0-480C132.48,32,32,132.48,32,256S132.48,480,256,480,480,379.52,480,256,379.52,32,256,32Z"/><path id="line3" d="M346.67,181.33H165.33a16,16,0,0,1,0-32H346.67a16,16,0,0,1,0,32Z"/><path id="line2" d="M346.67,272H165.33a16,16,0,0,1,0-32H346.67a16,16,0,1,1,0,32Z"/><path id="line1" d="M346.67,362.67H165.33a16,16,0,1,1,0-32H346.67a16,16,0,0,1,0,32Z"/></svg>
+    )
 }
 
 export default Hamburgur

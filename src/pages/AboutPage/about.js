@@ -17,8 +17,7 @@ const AboutPage=()=>{
                     Prancing through the path illuminated by alumini, it is strenuous to match the caliber and legacy. However, with synergy and industriousness, we could outlive the expectations
                     to date and hanker to pursue in the future.
                     </p>
-                </div>
-                <div className={aboutStyle.boldItems}>
+                    <div className={aboutStyle.boldItems}>
                      <div className={aboutStyle.boldItem}>
                          <div className={aboutStyle.boldItem1}>60+</div><br/>
                          <div className={aboutStyle.boldItem2}>EVENTS</div>
@@ -32,9 +31,10 @@ const AboutPage=()=>{
                          <div className={aboutStyle.boldItem2}>COLLEGES</div>
                      </div>
                 </div>
+                </div>
             </div>
-            <Arrow path="/"/>
             <div className={aboutStyle.colLog}><CollegeLogo/></div>
+            <Arrow path="/"/>
         </div>
     )
 }

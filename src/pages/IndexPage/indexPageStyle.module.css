@@ -14,3 +14,19 @@
     rgb(192, 38, 58) 100%
   );
 }
+
+.util {
+  font-family: "harabararegular";
+  font-size: 25px;
+  position: absolute;
+  transform: rotate(-90deg);
+  bottom: 60px;
+  right: -10px;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-device-width: 1024px) {
+  .util {
+    display: none;
+  }
+}

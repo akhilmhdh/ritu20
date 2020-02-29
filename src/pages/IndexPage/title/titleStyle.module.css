@@ -5,36 +5,32 @@
   display: flex;
   flex-direction: column;
   z-index: 5;
+  padding: 31px;
 }
 
-.titleOne {
-  font-size: 5vw;
-  font-family: "Barlow", sans-serif;
-  align-self: center;
-  font-weight: bold;
+.titleOne,
+.titleTwo,
+.titleThree {
+  font-size: 8vw;
+  font-family: "headliner";
+  align-self: flex-start;
+  text-align: left;
+  color: #262630;
+}
+.titleThreeAddon {
   color: #95020a;
 }
 
-.titleTwo {
-  font-size: 8vw;
-  font-family: "Montserrat";
-  align-self: center;
-  font-weight: bold;
-  color: #221e33;
-}
-
-.titleThree {
-  font-size: 7vw;
-  font-family: "Montserrat";
-  font-weight: bold;
-  color: #221e33;
-  align-self: center;
-}
 .blink {
-  font-weight: lighter;
-  font-family: sans-serif;
+  font-family: Arial;
   color: #3f3d56;
   animation: blinking 0.75s infinite;
+}
+
+.blinkRed {
+  font-family: "headliner";
+  color: #95020a;
+  animation: blinkingRed 0.75s infinite;
 }
 
 @keyframes blinking {
@@ -52,38 +48,33 @@
   }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 720px) {
-  /* some CSS here */
-  .titleContainer {
-    position: absolute;
-    top: 15%;
-    left: 15%;
+@keyframes blinkingRed {
+  25% {
+    color: transparent;
   }
-  .titleOne {
-    font-size: 40px;
+  50% {
+    color: #95020a;
   }
-  .titleTwo {
-    font-size: 52px;
+  75% {
+    color: transparent;
   }
-  .titleThree {
-    font-size: 50px;
+  100% {
+    color: #95020a;
   }
 }
-
-@media screen and (max-device-width: 320px) {
+@media screen and (max-device-width: 720px) {
   /* some CSS here */
   .titleContainer {
     position: absolute;
-    top: 20%;
-    left: 15%;
+    width: 100vw;
+    top: 15%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .titleOne {
-    font-size: 30px;
-  }
-  .titleTwo {
-    font-size: 40px;
-  }
+  .titleOne,
+  .titleTwo,
   .titleThree {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
