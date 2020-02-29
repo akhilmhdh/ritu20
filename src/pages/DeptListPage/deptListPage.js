@@ -6,7 +6,7 @@ import Arrow from '../utils/arrow-back/arrow'
 import deptListPageStyle from './deptListPageStyle.module.css'
 import CollegeLogo from '../utils/college-logo/collegeLogo'
 
-const DeptList=['general','ece','cse','mech','eee','arch','civil','mca']
+const DeptList=['general','ece','cse','mech','eee','b.arch','civil','mca']
 
 class DeptListPage extends Component{
     componentDidMount(){
@@ -44,9 +44,10 @@ class DeptListPage extends Component{
             <Arrow path="/"/>
             <div className="swiper-container">
               <div className="swiper-wrapper">
-              {DeptList.map((el)=>{
+              {DeptList.map((el,index)=>{
                 return(
                 <div className={`swiper-slide ${deptListPageStyle.img_cards}`}
+                key={index}
                 onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}
                 onSelect={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
                   <div className={deptListPageStyle.imgContainer}>

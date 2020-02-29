@@ -28,7 +28,7 @@ class CategoryListPage extends Component{
         .then((data)=>{
             this.setState({events:data});
             // eslint-disable-next-line no-unused-vars
-            const swiper = new Swiper('.swiper-container', {
+            const swiper2 = new Swiper('.swiper-container-2', {
               effect: 'coverflow',
               grabCursor: true,
               centeredSlides: true,
@@ -59,11 +59,12 @@ class CategoryListPage extends Component{
         return(
             <div className={categoryListPageStyle.container}>
               <Arrow path={`/${this.props.match.params.category}/dept`} click={this.state.click}/>
-              <div className="swiper-container">
+              <div className="swiper-container-2">
                 <div className="swiper-wrapper">
                      {this.state.events.head.map((el,index)=>{
                          return(
                         <div className={`swiper-slide ${categoryListPageStyle.img_cards}`}
+                        key={index}
                          onClick={()=>{
                            const url=this.props.match.params.category==="events"
                            ?`${this.props.match.url}/${index}/eventDetails`

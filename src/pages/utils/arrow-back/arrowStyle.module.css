@@ -8,4 +8,5 @@
   background-size: 100% 100%;
   cursor: pointer;
   z-index: 20;
+  filter: invert(1);
 }

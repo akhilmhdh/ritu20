@@ -100,7 +100,7 @@
   opacity: 1;
 }
 
-@media screen and (max-device-width: 720px) {
+@media screen and (max-device-width: 1024px) {
   .navContainer {
     padding: 10px;
     padding-left: 0;
