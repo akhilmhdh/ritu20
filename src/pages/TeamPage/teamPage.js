@@ -33,7 +33,7 @@ const TeamPage=()=>{
                 href="https://github.com/dravog7" name="John Abraham" 
                 role="Back End Developer"/>
                 <Template src="https://avatars2.githubusercontent.com/u/48565910?v=4"
-                href="https://github.com/ghubofsmaran" name="Smaran Ponnapan" 
+                href="https://github.com/ghubofsmaran" name="Smaran" 
                 role="UI/UX Designer"/>
         </div>
         </div>
