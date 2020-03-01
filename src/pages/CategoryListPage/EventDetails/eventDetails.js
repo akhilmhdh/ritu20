@@ -8,7 +8,7 @@ const cvtJSON2HTML=(x)=>{
 }
 
 const Tab1=(props)=>{
-    const url=(props.seats<=0 && props.available<=0)?null:props.mail
+    const url=(props.seats<=0 && props.available<=0)?null:props.mail;
     
     return(<div className={eventDetailsStyle.tab1Container}>
         <div className={url===undefined?eventDetailsStyle.submitBtn:
@@ -35,13 +35,13 @@ const Tab1=(props)=>{
 
 const Tab2=(props)=>{
     return(<div className={eventDetailsStyle.tab2Container}>
-        <ol>
+        <ul>
             {props.rules.map((el,index)=>{
                 return(<li key={index}>
                     {el}
                 </li>)
             })}
-        </ol>
+        </ul>
     </div>)
 }
 
