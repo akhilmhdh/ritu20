@@ -167,9 +167,11 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    flex-wrap: wrap-reverse;
   }
   .socialContainer a img {
     filter: invert(1);
+    padding: 3px;
   }
 }
 

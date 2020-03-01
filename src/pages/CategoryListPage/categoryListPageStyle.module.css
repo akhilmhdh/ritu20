@@ -22,10 +22,10 @@
   align-items: flex-start;
 }
 
-.container div:first-child {
+.container > div:first-child {
   position: relative;
   top: 0;
-  left: 3px;
+  left: 10px;
 }
 
 .pagination span {

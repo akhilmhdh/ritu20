@@ -121,9 +121,18 @@
   left: 5vw;
   top: 0px;
   cursor: pointer;
+  display: flex;
 }
-.arrow span {
-  font-size: 24px;
+.arrow img {
+  width: 30px;
+  height: 31px;
+  filter: invert(1);
+}
+
+.arrow div {
+  color: white;
+  width: auto;
+  overflow: hidden;
 }
 
 .socialContainer img {
@@ -143,5 +152,11 @@
   }
   .tabContainer {
     -ms-overflow-style: none;
+  }
+  .arrow div {
+    display: inline-block;
+    color: white;
+    width: inherit;
+    overflow: hidden;
   }
 }
