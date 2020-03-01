@@ -2,7 +2,7 @@ import React from 'react';
 
 import teamPageStyle from './teamPageStyle.module.css'
 import Arrow from './../utils/arrow-back/arrow';
-
+import CollegeLogo from './../utils/college-logo/collegeLogo'
 
 const Template =(props)=>{
     return(          
@@ -24,6 +24,8 @@ const TeamPage=()=>{
     return(
     <div className={teamPageStyle.container}>
         <div className={teamPageStyle.subContainer}>
+        <Arrow path="/"/>
+        <div className={teamPageStyle.subContainer2}>
         <div className={teamPageStyle.title}>TEAM</div>
         <div className={teamPageStyle.imgContainerSet}>
                 <Template src="https://avatars.githubusercontent.com/u/31166322?v=4"
@@ -37,7 +39,8 @@ const TeamPage=()=>{
                 role="UI/UX Designer"/>
         </div>
         </div>
-        <Arrow path="/"/>
+        </div>
+        <CollegeLogo/>
     </div>
     )
 }

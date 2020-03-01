@@ -69,6 +69,7 @@
 
 .socialContainer {
   padding: 0;
+  display: none;
 }
 
 .socialContainer a {
@@ -167,7 +168,7 @@
     justify-content: center;
     align-self: center;
   }
-  .socialContainer li a img {
+  .socialContainer a img {
     filter: invert(1);
   }
 }
