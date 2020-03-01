@@ -62,7 +62,7 @@ class Title extends Component{
         }
         }
     componentDidMount(){
-        this.typingAnimation();
+       setTimeout(()=>this.typingAnimation(),1500);
     }
 
   render(){

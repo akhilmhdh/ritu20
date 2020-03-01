@@ -20,13 +20,13 @@ const Tab1=(props)=>{
         </a>
         </div>
         <div className={eventDetailsStyle.price}>
-            PRIZE: {props.seats}
+            PRIZE: {props.prize}
         </div>
         <div className={eventDetailsStyle.time}>
             DATE: {props.date} 
         </div>
         <div className={eventDetailsStyle.time}>
-        TIME: {props.time}
+        Reg Fee: {props.fees}
         </div>
         <div dangerouslySetInnerHTML={{__html:cvtJSON2HTML(props.details)}}
         className={eventDetailsStyle.details}></div>
@@ -84,7 +84,7 @@ class EventDetails extends Component{
                 details={this.props.body[index].description}
                 prize={this.props.body[index].prize}
                 date={this.props.body[index].date}
-                time={this.props.body[index].time}
+                fees={this.props.body[index].fees}
                 seats={this.props.body[index].seats}
                 available={this.props.body[index].available}/>
                 break;
