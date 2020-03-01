@@ -46,13 +46,13 @@ class DeptListPage extends Component{
               {DeptList.map((el,index)=>{
                 return(
                 <div className={`swiper-slide ${deptListPageStyle.img_cards}`}
-                key={index}>
+                key={index}
+                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
                   <div className={deptListPageStyle.imgContainer}
                 onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
                       <img src={`/depicons/${el}.png`} alt="images"/>
                   </div> 
-                  <div className={deptListPageStyle.textContainer}
-                   onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
+                  <div className={deptListPageStyle.textContainer}>
                     {el}
                   </div>   
                 </div>
