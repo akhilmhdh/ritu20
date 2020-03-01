@@ -25,21 +25,37 @@
   color: #efedef;
   box-shadow: -1px 15px 30px -12px black;
   display: flex;
-  flex-direction: column;
-  padding: 50px;
+  padding: 50px 50px 50px 20px;
   border-radius: 10px;
-  overflow: scroll;
 }
-.subContainer {
+
+.subContainer div:first-child {
+  position: relative;
+}
+
+.subContainer > div:first-child {
+  filter: invert(1);
+  padding: 10px 10px 0 0;
+}
+
+.subContainer2 {
+  display: flex;
+  width: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subContainer2 {
   overflow: auto;
 }
-.subContainer::-webkit-scrollbar {
+.subContainer2::-webkit-scrollbar {
   width: 0;
 }
-.subContainer {
+.subContainer2 {
   overflow: -moz-scrollbars-none;
 }
-.subContainer {
+.subContainer2 {
   -ms-overflow-style: none;
 }
 .title {
@@ -66,7 +82,7 @@
 
 .cardText {
   color: white;
-  font-family: "harabararegular";
+  font-family: "montserrat";
   text-decoration: none;
   font-size: 1.2em;
   display: flex;

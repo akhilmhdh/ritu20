@@ -8,6 +8,8 @@ const AboutPage=()=>{
     return(
         <div className={aboutStyle.container}>
             <div className={aboutStyle.subContainer}>
+                <Arrow path="/"/>
+                <div className={aboutStyle.subContainer2}>
                 <div className={aboutStyle.title}>Ritu</div>
                 <div className={aboutStyle.writeUpContainer}>
                     <p>
@@ -31,10 +33,10 @@ const AboutPage=()=>{
                          <div className={aboutStyle.boldItem2}>COLLEGES</div>
                      </div>
                 </div>
+                        </div>
                 </div>
             </div>
             <div className={aboutStyle.colLog}><CollegeLogo/></div>
-            <Arrow path="/"/>
         </div>
     )
 }

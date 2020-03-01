@@ -204,23 +204,23 @@ html {
 
 #wind {
   animation: windy 10s ease-out forwards infinite;
-  stroke-dasharray: 420;
-  stroke-dashoffset: 420;
+  stroke-dasharray: 430;
+  stroke-dashoffset: 438;
 }
 #wind-2 {
   animation: windy2 10s ease-out forwards infinite;
-  stroke-dasharray: 420;
-  stroke-dashoffset: 420;
+  stroke-dasharray: 430;
+  stroke-dashoffset: 438;
 }
 #wind-3 {
   animation: windy3 10s ease-out forwards infinite;
-  stroke-dasharray: 420;
-  stroke-dashoffset: 420;
+  stroke-dasharray: 430;
+  stroke-dashoffset: 438;
 }
 #wind-4 {
   animation: windy4 10s ease-out forwards infinite;
-  stroke-dasharray: 420;
-  stroke-dashoffset: 420;
+  stroke-dasharray: 430;
+  stroke-dashoffset: 438;
 }
 @keyframes windy {
   10% {
@@ -230,12 +230,12 @@ html {
     stroke-dashoffset: 0;
   }
   51% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
 }
 @keyframes windy2 {
   10% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
   20% {
     stroke-dashoffset: 0;
@@ -244,12 +244,12 @@ html {
     stroke-dashoffset: 0;
   }
   51% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
 }
 @keyframes windy3 {
   20% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
   30% {
     stroke-dashoffset: 0;
@@ -258,12 +258,12 @@ html {
     stroke-dashoffset: 0;
   }
   51% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
 }
 @keyframes windy4 {
   30% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
   40% {
     stroke-dashoffset: 0;
@@ -272,7 +272,7 @@ html {
     stroke-dashoffset: 0;
   }
   51% {
-    stroke-dashoffset: 420;
+    stroke-dashoffset: 438;
   }
 }
 
@@ -355,6 +355,26 @@ html {
     transform: rotateZ(10deg);
   }
 }
+
+#board {
+  animation: boardSwing 2s ease-in-out infinite;
+  transform-origin: 30% 20%;
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+@keyframes boardSwing {
+  0% {
+    transform: rotateX(8deg);
+  }
+  50% {
+    transform: rotateX(-4deg);
+  }
+  100% {
+    transform: rotateX(8deg);
+  }
+}
+
 .swiper-container {
   width: 100vw;
   height: 75vh;
