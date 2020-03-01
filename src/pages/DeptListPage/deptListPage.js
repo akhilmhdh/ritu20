@@ -16,6 +16,7 @@ class DeptListPage extends Component{
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        preventClicks: false,
         spaceBetween:50,
         coverflowEffect: {
           rotate: 30,
