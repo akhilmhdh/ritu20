@@ -110,12 +110,20 @@
   margin: 1em 5px 1em 5px;
 }
 
+.tab3Container {
+  overflow: hidden;
+}
 .tab3Container ul li {
   font-size: 1.5em;
   font-weight: bold;
   display: flex;
   justify-content: baseline;
   align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.tab3Container ul li * {
   padding: 10px;
 }
 
@@ -168,5 +176,8 @@
   .arrow div {
     overflow: unset;
     font-size: 25px;
+  }
+  .tab3Container ul {
+    padding: 0;
   }
 }
