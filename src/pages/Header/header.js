@@ -48,14 +48,14 @@ class Header extends Component{
                  className={window.location.pathname==="/team"?{opacity:"0.5"}:null}>TEAM</li>
                 </Link>
                 <div className={headerStyle.socialContainer+" "+headerStyle.navItem}>
-                                <a href="https://www.instagram.com/rit.utsav" target="_blank"
-                                rel="noopener noreferrer"><img src="/img/insta.png" alt="social"/></a>
-                                <a href="https://www.facebook.com/rituofficial" target="_blank"
-                                rel="noopener noreferrer"><img src="/img/facebook.png" alt="social"/></a>
-                                 <a href="mailto:ritu@rit.ac.in" target="_blank"
-                                    rel="noopener noreferrer"><img src="/img/email.png" alt="mailID"/></a>
-                                 <a href="http://ca.ritu20.com" target="_blank"
-                                rel="noopener noreferrer"><img src="/img/car.png" alt="CA"/></a>
+                    <a href="https://www.instagram.com/rit.utsav" target="_blank"
+                    rel="noopener noreferrer"><img src="/img/insta.png" alt="social"/></a>
+                    <a href="https://www.facebook.com/rituofficial" target="_blank"
+                    rel="noopener noreferrer"><img src="/img/facebook.png" alt="social"/></a>
+                    <a href="mailto:ritu@rit.ac.in" target="_blank"
+                        rel="noopener noreferrer"><img src="/img/email.png" alt="mailID"/></a>
+                    <a href="http://ca.ritu20.com" target="_blank"
+                    rel="noopener noreferrer"><img src="/img/car.png" alt="CA"/></a>
                 </div>
             </ul>
         </nav>

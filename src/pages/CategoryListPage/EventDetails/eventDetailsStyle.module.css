@@ -42,7 +42,7 @@
   font-family: "poppins";
   line-height: 1.5;
 }
-.tabContainer div:last-child {
+.tabContainer > div:last-child {
   overflow-y: scroll;
 }
 
@@ -113,15 +113,21 @@
 .tab3Container ul li {
   font-size: 1.5em;
   font-weight: bold;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  padding: 10px;
 }
 
 .arrow {
-  width: 25px;
+  width: inherit;
   height: auto;
   left: 5vw;
   top: 0px;
   cursor: pointer;
   display: flex;
+  justify-content: baseline;
+  align-items: center;
 }
 .arrow img {
   width: 30px;
@@ -131,8 +137,12 @@
 
 .arrow div {
   color: white;
-  width: auto;
-  overflow: hidden;
+  width: inherit;
+  overflow: unset;
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
 }
 
 .socialContainer img {
@@ -153,10 +163,10 @@
   .tabContainer {
     -ms-overflow-style: none;
   }
+}
+@media screen and (max-device-width: 720px) {
   .arrow div {
-    display: inline-block;
-    color: white;
-    width: inherit;
-    overflow: hidden;
+    overflow: unset;
+    font-size: 25px;
   }
 }

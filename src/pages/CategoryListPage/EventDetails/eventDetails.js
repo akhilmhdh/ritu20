@@ -11,7 +11,7 @@ const Tab1=(props)=>{
     const url=(props.seats<=0 && props.available<=0)?null:props.mail;
     
     return(<div className={eventDetailsStyle.tab1Container}>
-        <div className={url===undefined?eventDetailsStyle.submitBtn:
+        <div className={url!==undefined?eventDetailsStyle.submitBtn:
             `${eventDetailsStyle.submitBtn} ${eventDetailsStyle.submitBtnDisable}`}>
         <a href={url}
         target="_blank"
@@ -20,7 +20,7 @@ const Tab1=(props)=>{
         </a>
         </div>
         <div className={eventDetailsStyle.price}>
-            PRIZE: {props.prize}
+            PRIZE: {props.seats}
         </div>
         <div className={eventDetailsStyle.time}>
             DATE: {props.date} 
@@ -50,7 +50,8 @@ const Tab3=(props)=>{
         <ul>
             {props.contact.map((el,index)=>{
                 return(<li key={index}>
-                    {el.name}: {+el.mob}
+                    <img src="/img/whatsapp.png" style={{width:"30px"}} alt="whatsapp"/>
+                    {el.name}: <a href={`https://api.whatsapp.com/send?phone=+91${el.mob}`}>{el.mob}</a>
                 </li>)
             })}
         </ul>
