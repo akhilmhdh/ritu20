@@ -11,13 +11,13 @@ const SponserPage =()=>{
         <div className={sponserPageStyle.subContainer}>
             <Arrow path="/"/>
             <div className={sponserPageStyle.subContainer2}>
-            <div className={sponserPageStyle.title}>Our Sponsers</div>
+            <div className={sponserPageStyle.title}>Our Sponsors</div>
             <div>
             <div className={sponserPageStyle.sponserItem}>
                <img src="/img/snapchat.png" alt="snapchat logo"/>
                <div>
-                   <span style={{fontSize:"15px"}}>OFFICIAL CAMERA PARTNER</span>
-                   <br/>SNAPCHAT
+                   SNAPCHAT<br/>
+                   <span style={{fontSize:"15px"}}>Official Camera Partner</span>
                </div>
             </div>
             </div>

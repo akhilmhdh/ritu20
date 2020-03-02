@@ -20,7 +20,7 @@ const Tab1=(props)=>{
             <div className={teamPageStyle.tab1SubContainer}>
             <CommitteTemplate name="Thoufeek Hussain" position="Student Coordinator" number="8921047381"/>
             <CommitteTemplate name="Gokul Kannan" position="Secretary" number="9744627890"/>
-            <CommitteTemplate name="AZHAR" position="Chairman" number="9961727078"/>
+            <CommitteTemplate name="Azhar" position="Chairman" number="9961727078"/>
             <CommitteTemplate name="Safia E K" position="Vice Chairperson" number="999594325"/>
             </div>
             <hr/>
@@ -91,7 +91,7 @@ class TeamPage extends Component{
                     <div className={teamPageStyle.subContainer}>
                     <Arrow path="/"/>
                     <div className={teamPageStyle.subContainer2}>
-                    <div className={teamPageStyle.title}>TEAM</div>
+                    <div className={teamPageStyle.title}>Team</div>
                     <div className={teamPageStyle.tabs}>
                             <div id="0" onClick={this.onClick} 
                             className={this.state.index===0?teamPageStyle.active:null}>ORG</div>

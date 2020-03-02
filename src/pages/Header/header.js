@@ -35,9 +35,9 @@ class Header extends Component{
                     <li onClick={()=>this.setState({active:true})}
                     style={window.location.pathname==="/about"?{opacity:"0.5"}:null}>ABOUT</li>
                 </Link>
-                <Link to="/sponsers" className={headerStyle.navItem}>
+                <Link to="/sponsors" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}
-                style={window.location.pathname==="/sponsers"?{opacity:"0.5"}:null}>SPONSERS</li>
+                style={window.location.pathname==="/sponsors"?{opacity:"0.5"}:null}>SPONSORS</li>
                 </Link>
                 <Link to="/events/dept" className={headerStyle.navItem}>
                     <li onClick={()=>this.setState({active:true})}

@@ -42,7 +42,7 @@ const AnimationApp=()=>{
                 <Route exact path="/" component={IndexPage}/>
                 <Route exact path="/about" component={AboutPage}/>
                 <Route exact path="/team" component={TeamPage}/>
-                <Route exact path="/sponsers" component={SponserPage}/>
+                <Route exact path="/sponsors" component={SponserPage}/>
                 <Route path="/:category/dept" component={DeptListPage}/>
                 <Route component={NoMatch}/>
             </Switch>
