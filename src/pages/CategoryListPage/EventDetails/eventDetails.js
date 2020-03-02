@@ -8,10 +8,10 @@ const cvtJSON2HTML=(x)=>{
 }
 
 const Tab1=(props)=>{
-    const url=(props.seats<=0 && props.available<=0)?null:props.mail
+    const url=(props.seats<=0 && props.available<=0)?null:props.mail;
     
     return(<div className={eventDetailsStyle.tab1Container}>
-        <div className={url===undefined?eventDetailsStyle.submitBtn:
+        <div className={url!==undefined?eventDetailsStyle.submitBtn:
             `${eventDetailsStyle.submitBtn} ${eventDetailsStyle.submitBtnDisable}`}>
         <a href={url}
         target="_blank"
@@ -26,7 +26,7 @@ const Tab1=(props)=>{
             DATE: {props.date} 
         </div>
         <div className={eventDetailsStyle.time}>
-        TIME: {props.time}
+        Reg Fee: {props.fees}
         </div>
         <div dangerouslySetInnerHTML={{__html:cvtJSON2HTML(props.details)}}
         className={eventDetailsStyle.details}></div>
@@ -35,13 +35,13 @@ const Tab1=(props)=>{
 
 const Tab2=(props)=>{
     return(<div className={eventDetailsStyle.tab2Container}>
-        <ol>
+        <ul>
             {props.rules.map((el,index)=>{
                 return(<li key={index}>
                     {el}
                 </li>)
             })}
-        </ol>
+        </ul>
     </div>)
 }
 
@@ -50,7 +50,8 @@ const Tab3=(props)=>{
         <ul>
             {props.contact.map((el,index)=>{
                 return(<li key={index}>
-                    {el.name}: {+el.mob}
+                    <img src="/img/whatsapp.png" style={{width:"30px"}} alt="whatsapp"/>
+                    {el.name}: <a href={`https://api.whatsapp.com/send?phone=+91${el.mob}`}>{el.mob}</a>
                 </li>)
             })}
         </ul>
@@ -83,7 +84,7 @@ class EventDetails extends Component{
                 details={this.props.body[index].description}
                 prize={this.props.body[index].prize}
                 date={this.props.body[index].date}
-                time={this.props.body[index].time}
+                fees={this.props.body[index].fees}
                 seats={this.props.body[index].seats}
                 available={this.props.body[index].available}/>
                 break;
@@ -95,7 +96,9 @@ class EventDetails extends Component{
                     <div className={eventDetailsStyle.arrow}
                     onClick={()=>{this.props.click();
                         this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
-                        <span>&#10006;</span></div>
+                        <img src="/img/close.png" alt="close"/>
+                        <div>{this.props.head[index].name}</div>
+                    </div>
                     <div className={eventDetailsStyle.tabs}>
                         <div id="0" onClick={this.onClick} 
                         className={this.state.index===0?eventDetailsStyle.active:null}>Details</div>

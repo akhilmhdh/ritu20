@@ -42,7 +42,7 @@
   font-family: "poppins";
   line-height: 1.5;
 }
-.tabContainer div:last-child {
+.tabContainer > div:last-child {
   overflow-y: scroll;
 }
 
@@ -110,20 +110,47 @@
   margin: 1em 5px 1em 5px;
 }
 
+.tab3Container {
+  overflow: hidden;
+}
 .tab3Container ul li {
   font-size: 1.5em;
   font-weight: bold;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.tab3Container ul li * {
+  padding: 10px;
 }
 
 .arrow {
-  width: 25px;
+  width: inherit;
   height: auto;
   left: 5vw;
   top: 0px;
   cursor: pointer;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
 }
-.arrow span {
-  font-size: 24px;
+.arrow img {
+  width: 30px;
+  height: 31px;
+  filter: invert(1);
+}
+
+.arrow div {
+  color: white;
+  width: inherit;
+  overflow: unset;
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
 }
 
 .socialContainer img {
@@ -143,5 +170,14 @@
   }
   .tabContainer {
     -ms-overflow-style: none;
+  }
+}
+@media screen and (max-device-width: 720px) {
+  .arrow div {
+    overflow: unset;
+    font-size: 25px;
+  }
+  .tab3Container ul {
+    padding: 0;
   }
 }
