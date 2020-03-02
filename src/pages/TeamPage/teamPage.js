@@ -3,9 +3,31 @@ import teamPageStyle from './teamPageStyle.module.css'
 import Arrow from './../utils/arrow-back/arrow';
 import CollegeLogo from './../utils/college-logo/collegeLogo'
 
+const CommitteTemplate =(props)=>{
+    return(
+    <div className={teamPageStyle.comTempItem}>
+        <a href={`tel:+91${props.number}`}>
+        <div>{props.name}</div>
+        <div>{props.position}</div>
+        <div>{props.number}</div>
+        </a>
+    </div>
+    )
+}
+
 const Tab1=(props)=>{
     return(<div className={teamPageStyle.tab1Container}>
-        Updating Soon!!!
+            <div className={teamPageStyle.tab1SubContainer}>
+            <CommitteTemplate name="Thoufeek Hussain" position="Student Coordinator" number="8921047381"/>
+            <CommitteTemplate name="Gokul Kannan" position="Secretary" number="9744627890"/>
+            <CommitteTemplate name="AZHAR" position="Chairman" number="9961727078"/>
+            <CommitteTemplate name="Safia E K" position="Vice Chairperson" number="999594325"/>
+            </div>
+            <hr/>
+            <div className={teamPageStyle.tab1SubContainer}>
+            <CommitteTemplate name="Dr. A Praveen" position="Staff Coordinator" number="9495047173"/>
+            <CommitteTemplate name="Dr. Sunil Kumar P R" position="Staff Coordinator" number="9447806446"/>
+            </div>
          </div>)
 }
 
