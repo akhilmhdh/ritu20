@@ -185,6 +185,6 @@
 @media screen and (max-device-width: 720px) {
   .socialContainer a:last-child {
     position: relative;
-    bottom: 12vh;
+    bottom: 10vh;
   }
 }
