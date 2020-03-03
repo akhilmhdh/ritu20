@@ -5,10 +5,7 @@
   z-index: 1;
   background: rgb(253, 135, 98);
   background: linear-gradient(
-    180deg,
-    rgba(253, 135, 98, 1) 0%,
-    rgba(233, 92, 85, 1) 50%,
-    rgba(214, 49, 72, 1) 100%
+    #00c9ff, #92fe9d
   );
   padding: 0;
   margin: 0;

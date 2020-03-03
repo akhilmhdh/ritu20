@@ -20,7 +20,7 @@ class CategoryListPage extends Component{
         this.state={events:null,click:false};
     }
     componentDidMount(){
-      this.setState({click:false})
+      this.setState({click:false});
       const {match:{params:{id,category}}}=this.props;
         axios.get(`${APIurl}${category}?dept=${id}`).then(res=>res.data)
         .catch((err)=>{
@@ -56,7 +56,10 @@ class CategoryListPage extends Component{
       }
        render(){
            if(this.state.events==null){
-             return <div className={categoryListPageStyle.spinnerContainer}><RituSpinner/></div>}
+             return <div className={categoryListPageStyle.spinnerContainer}>
+                      <RituSpinner/>
+                    </div>;
+            }
           else if(this.state.events.body.length===0){
             return(
               <div className={categoryListPageStyle.comingSoonContainer}>
