@@ -69,6 +69,7 @@
 
 .socialContainer {
   padding: 0;
+  display: none;
 }
 
 .socialContainer a {
@@ -77,6 +78,7 @@
 .socialContainer img {
   height: 30px;
 }
+
 .navFocusedItem {
   font-weight: 900;
   color: #45416e;
@@ -166,14 +168,23 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    flex-wrap: wrap-reverse;
   }
-  .socialContainer li a img {
+  .socialContainer a img {
     filter: invert(1);
+    padding: 3px;
   }
 }
 
 @media screen and (max-device-width: 320px) {
   .main li {
     font-size: 19px;
+  }
+}
+
+@media screen and (max-device-width: 720px) {
+  .socialContainer a:last-child {
+    position: relative;
+    bottom: 10vh;
   }
 }

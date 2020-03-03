@@ -25,27 +25,30 @@
   color: #efedef;
   box-shadow: -1px 15px 30px -12px black;
   display: flex;
-  flex-direction: column;
-  padding: 50px;
+  padding: 50px 50px 50px 20px;
   border-radius: 10px;
-  overflow: scroll;
 }
-.subContainer {
-  overflow: auto;
+
+.subContainer div:first-child {
+  position: relative;
 }
-.subContainer::-webkit-scrollbar {
-  width: 0;
+
+.subContainer > div:first-child {
+  filter: invert(1);
 }
-.subContainer {
-  overflow: -moz-scrollbars-none;
+
+.subContainer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
-.subContainer {
-  -ms-overflow-style: none;
-}
+
 .title {
   font-size: 52px;
   font-weight: 900;
-  font-family: "harabararegular";
+  font-family: "poppins";
   letter-spacing: 2px;
 }
 
@@ -66,7 +69,7 @@
 
 .cardText {
   color: white;
-  font-family: "harabararegular";
+  font-family: "montserrat";
   text-decoration: none;
   font-size: 1.2em;
   display: flex;
@@ -74,9 +77,81 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  text-align: center;
 }
 .cardText div {
   padding: 5px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+  padding: 10px;
+}
+.tabs div {
+  text-align: center;
+  flex: 1;
+  border-right: 1px #42414dbe solid;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "poppins";
+  font-weight: 900;
+}
+
+.subContainer2 > div:last-child {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.subContainer2 > div:last-child {
+  overflow: auto;
+}
+.subContainer2 > div:last-child::-webkit-scrollbar {
+  width: 0;
+}
+.subContainer2 > div:last-child {
+  overflow: -moz-scrollbars-none;
+}
+.subContainer2 > div:last-child {
+  -ms-overflow-style: none;
+}
+
+.active {
+  border-bottom: 2px #fd264f solid;
+}
+
+.tab1SubContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.comTempItem a {
+  display: flex;
+  flex-direction: column;
+  font-family: "montserrat";
+  text-align: center;
+  padding: 10px;
+  line-height: 1.4;
+  justify-content: center;
+  align-items: center;
+}
+.comTempItem div {
+  font-size: 21px;
+}
+
+.comTempItem div:first-child {
+  font-size: 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comTempItem a {
+  text-decoration: none;
+  color: aliceblue;
 }
 
 @media screen and (max-device-width: 720px) {
@@ -86,5 +161,18 @@
   }
   .subContainer {
     margin: 0;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .imgContainerSet {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    right: 0;
   }
 }

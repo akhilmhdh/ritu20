@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
+Sitemap: http://www.ritu20.com/sitemap.xml
 User-agent: *
 Disallow:

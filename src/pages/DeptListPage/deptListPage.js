@@ -16,8 +16,8 @@ class DeptListPage extends Component{
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        preventClicks: false,
         spaceBetween:50,
-        loop:true,
         coverflowEffect: {
           rotate: 30,
           stretch: 0,
@@ -48,9 +48,9 @@ class DeptListPage extends Component{
                 return(
                 <div className={`swiper-slide ${deptListPageStyle.img_cards}`}
                 key={index}
-                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}
-                onSelect={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
-                  <div className={deptListPageStyle.imgContainer}>
+                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
+                  <div className={deptListPageStyle.imgContainer}
+                onClick={()=>{this.props.history.push(`/${this.props.match.params.category}/dept/${el}`)}}>
                       <img src={`/depicons/${el}.png`} alt="images"/>
                   </div> 
                   <div className={deptListPageStyle.textContainer}>

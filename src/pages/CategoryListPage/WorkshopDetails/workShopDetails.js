@@ -31,7 +31,8 @@ const Tab2=(props)=>{
         <ul>
             {props.contact.map((el,index)=>{
                 return(<li key={index}>
-                    {el.name}: {+el.mob}
+                    <img src="/img/whatsapp.png" style={{width:"30px"}} alt="whatsapp"/>
+                    {el.name}: <a href={`https://api.whatsapp.com/send?phone=+91${el.mob}`}>{el.mob}</a>
                 </li>)
             })}
         </ul>

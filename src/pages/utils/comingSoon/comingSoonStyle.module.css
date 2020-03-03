@@ -1,0 +1,13 @@
+.container {
+  padding-top: 80px;
+  width: 100vw;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh) * 100) - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container svg {
+  transform: scale(1.3);
+}
