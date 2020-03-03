@@ -15,7 +15,7 @@
   align-self: flex-start;
   left: 5px;
 }
-.container div:nth-child(3) {
+.container > div:nth-child(3) {
   position: relative;
 }
 .deptIconIndex {
