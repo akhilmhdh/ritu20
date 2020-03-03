@@ -18,10 +18,10 @@ const CommitteTemplate =(props)=>{
 const Tab1=(props)=>{
     return(<div className={teamPageStyle.tab1Container}>
             <div className={teamPageStyle.tab1SubContainer}>
-            <CommitteTemplate name="Thoufeek Hussain" position="Student Coordinator" number="8921047381"/>
-            <CommitteTemplate name="Gokul Kannan" position="Secretary" number="9744627890"/>
             <CommitteTemplate name="Azhar" position="Chairman" number="9961727078"/>
             <CommitteTemplate name="Safia E K" position="Vice Chairperson" number="999594325"/>
+            <CommitteTemplate name="Gokul Kannan" position="Secretary" number="9744627890"/>
+            <CommitteTemplate name="Thoufeek Hussain" position="Student Coordinator" number="8921047381"/>
             </div>
             <hr/>
             <div className={teamPageStyle.tab1SubContainer}>
@@ -94,11 +94,11 @@ class TeamPage extends Component{
                     <div className={teamPageStyle.title}>Team</div>
                     <div className={teamPageStyle.tabs}>
                             <div id="0" onClick={this.onClick} 
-                            className={this.state.index===0?teamPageStyle.active:null}>ORG</div>
+                            className={this.state.index===0?teamPageStyle.active:null}>Contact</div>
                             <div id="1" onClick={this.onClick}
-                                className={this.state.index===1?teamPageStyle.active:null}>WEB</div>
-                        </div> 
-                            {component}
+                                className={this.state.index===1?teamPageStyle.active:null}>Website</div>
+                    </div> 
+                        {component}
                     </div>
                     </div>
                     <CollegeLogo/>
