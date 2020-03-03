@@ -20,7 +20,7 @@ const Tab1=(props)=>{
             <div className={teamPageStyle.tab1SubContainer}>
             <CommitteTemplate name="Azhar" position="Chairman" number="9961727078"/>
             <CommitteTemplate name="Safia E K" position="Vice Chairperson" number="999594325"/>
-            <CommitteTemplate name="Gokul Kannan" position="Secretary" number="9744627890"/>
+            <CommitteTemplate name="Gokul Kannan" position="General Secretary" number="9744627890"/>
             <CommitteTemplate name="Thoufeek Hussain" position="Student Coordinator" number="8921047381"/>
             </div>
             <hr/>

@@ -8,15 +8,15 @@ const cvtJSON2HTML=(x)=>{
 }
 
 const Tab1=(props)=>{
-    const url=(props.seats<=0 && props.available<=0)?null:props.mail;
+    const url=(props.seats<=0 || props.available<=0 || props.mail ==="https://ritu20.com/")?null:props.mail;
     
     return(<div className={eventDetailsStyle.tab1Container}>
-        <div className={url!==undefined?eventDetailsStyle.submitBtn:
+        <div className={url?eventDetailsStyle.submitBtn:
             `${eventDetailsStyle.submitBtn} ${eventDetailsStyle.submitBtnDisable}`}>
         <a href={url}
         target="_blank"
         rel="noopener noreferrer">
-            {props.online?"Submit Your Entry":"Register Now"}
+            {url?props.online?"Submit Your Entry":"Register Now":"coming soon"}
         </a>
         </div>
         <div className={eventDetailsStyle.price}>
