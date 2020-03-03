@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import Swiper from 'swiper'
 
+import { connect } from 'react-redux';
+
 import Arrow from '../utils/arrow-back/arrow'
 
 import deptListPageStyle from './deptListPageStyle.module.css'
@@ -40,7 +42,8 @@ class DeptListPage extends Component{
     }
      render(){
       return(
-        <div className={deptListPageStyle.container}>
+        <div className={deptListPageStyle.container}
+        style={this.props.blurred?{filter:"blur(2px)"}:null}>
             <Arrow path="/"/>
             <div className="swiper-container">
               <div className="swiper-wrapper">
@@ -69,4 +72,9 @@ class DeptListPage extends Component{
       )
      }
   };
-  export default DeptListPage;
+
+  const mapStateToProps = ({ blurred }) => {
+    return { blurred };
+  };
+
+  export default connect(mapStateToProps,null)(DeptListPage);

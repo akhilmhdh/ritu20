@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import teamPageStyle from './teamPageStyle.module.css'
 import Arrow from './../utils/arrow-back/arrow';
 import CollegeLogo from './../utils/college-logo/collegeLogo'
+import { connect } from 'react-redux';
+
 
 const CommitteTemplate =(props)=>{
     return(
@@ -87,7 +89,8 @@ class TeamPage extends Component{
                 break;
             }
             return(
-                <div className={teamPageStyle.container}>
+                <div className={teamPageStyle.container}
+                style={this.props.blurred?{filter:"blur(2px)"}:null}>
                     <div className={teamPageStyle.subContainer}>
                     <Arrow path="/"/>
                     <div className={teamPageStyle.subContainer2}>
@@ -107,4 +110,9 @@ class TeamPage extends Component{
     }
 }
 
-export default TeamPage;
+const mapStateToProps = ({ blurred }) => {
+    return { blurred };
+  };
+
+
+export default connect(mapStateToProps,null)(TeamPage);

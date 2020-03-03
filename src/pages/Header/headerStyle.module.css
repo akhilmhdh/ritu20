@@ -12,7 +12,7 @@
 .container {
   position: absolute;
   width: 100vw;
-  z-index: 10;
+  z-index: 11;
   overflow: hidden;
   overflow: hidden;
 }
@@ -57,6 +57,10 @@
   font-size: 25px;
   letter-spacing: 2px;
   padding-bottom: 0.5em;
+}
+
+.blurredLogo {
+  filter: blur(2px);
 }
 
 .navToggle {

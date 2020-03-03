@@ -58,8 +58,9 @@
 
 .comingSoonContainer {
   width: 100vw;
+  padding-top: 80px;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc((var(--vh, 1vh) * 100) - 80px);
   background: rgb(253, 135, 98);
   background: linear-gradient(#00c9ff, #92fe9d);
   display: flex;
@@ -68,10 +69,11 @@
   align-items: center;
 }
 .comingSoonContainer > div:first-child {
-  position: absolute;
+  position: relative;
   top: 5vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 5);
   left: 5vw;
+  align-self: flex-start;
 }
 .comingSoonContainer div:last-child {
   position: relative;

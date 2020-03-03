@@ -7,9 +7,11 @@
   top: 0;
   overflow: hidden;
   background: rgb(253, 135, 98);
-  background: linear-gradient(
-    #00c9ff, #92fe9d
-  );
+  background: linear-gradient(#00c9ff, #92fe9d);
+}
+
+.blurContainer {
+  filter: blur(2px);
 }
 
 .util {

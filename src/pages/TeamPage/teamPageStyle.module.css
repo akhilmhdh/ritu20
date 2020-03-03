@@ -4,9 +4,7 @@
   height: calc(var(--vh, 1vh) * 100);
   z-index: 1;
   background: rgb(253, 135, 98);
-  background: linear-gradient(
-    #00c9ff, #92fe9d
-  );
+  background: linear-gradient(#00c9ff, #92fe9d);
   padding: 0;
   margin: 0;
   display: flex;
@@ -160,7 +158,7 @@
     margin: 0;
     width: 80vw;
     height: 70vh;
-    padding: 20px;
+    padding: 20px 40px 20px 10px;
   }
   .title {
     font-size: 32px;

@@ -3,6 +3,8 @@ import Swiper from 'swiper';
 import axios from 'axios'
 import {Route} from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 import WorkShopDetails from './WorkshopDetails/workShopDetails'
 import EventDetails from './EventDetails/eventDetails'
 
@@ -13,6 +15,7 @@ import CollegeLogo from '../utils/college-logo/collegeLogo';
 import ComingSoon from '../utils/comingSoon/comingSoon'
 
 const APIurl="https://rituback.azurewebsites.net/";
+
 
 class CategoryListPage extends Component{
     constructor(props){
@@ -73,7 +76,8 @@ class CategoryListPage extends Component{
           }
           else{
             return(
-              <div className={categoryListPageStyle.container}>
+              <div className={categoryListPageStyle.container}
+              style={this.props.blurred?{filter:"blur(2px)"}:null}>
                 <Arrow path={`/${this.props.match.params.category}/dept`} click={this.state.click}/>
                 <div className="swiper-container-2">
                   <div className="swiper-wrapper">
@@ -115,4 +119,9 @@ class CategoryListPage extends Component{
        }
 }
 
-export default CategoryListPage;
+
+const mapStateToProps = ({ blurred }) => {
+  return { blurred };
+};
+
+export default connect(mapStateToProps,null)(CategoryListPage);

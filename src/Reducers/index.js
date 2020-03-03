@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
+import blurReducer from './blurData'
 
 const rootReducer = combineReducers({
-    state: (state = {}) => state
+    blurred:blurReducer
 });
   
 export default rootReducer;

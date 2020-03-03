@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{Component} from 'react'
 
 import aboutStyle from './aboutStyle.module.css'
 import Arrow from '../utils/arrow-back/arrow'
 import CollegeLogo from '../utils/college-logo/collegeLogo'
+import { connect } from 'react-redux'
 
-const AboutPage=()=>{
+class AboutPage extends Component{
+   render(){
     return(
-        <div className={aboutStyle.container}>
+        <div className={aboutStyle.container}
+        style={this.props.blurred?{filter:"blur(2px)"}:null}>
             <div className={aboutStyle.subContainer}>
                 <Arrow path="/"/>
                 <div className={aboutStyle.subContainer2}>
@@ -35,6 +38,12 @@ const AboutPage=()=>{
             <div className={aboutStyle.colLog}><CollegeLogo/></div>
         </div>
     )
+   }
 }
 
-export default AboutPage;
+const mapStateToProps = ({ blurred }) => {
+    return { blurred };
+  };
+
+
+export default connect(mapStateToProps,null)(AboutPage);
