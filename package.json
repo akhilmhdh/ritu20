@@ -29,8 +29,15 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    "since 2010"
-  ],
+  "browserslist": {
+    "production": [
+      "since 2010"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {}
 }
