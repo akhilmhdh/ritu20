@@ -10,6 +10,7 @@ import DeptListPage from './pages/DeptListPage/deptListPage';
 import CategoryListPage from './pages/CategoryListPage/categoryListPage';
 import AboutPage from './pages/AboutPage/about';
 import TeamPage from './pages/TeamPage/teamPage';
+import SponserPage from './pages/SponserPage/sponserPage';
 import NoMatch from './pages/NoMatchPage/noMatch'
 
 
@@ -41,6 +42,7 @@ const AnimationApp=()=>{
                 <Route exact path="/" component={IndexPage}/>
                 <Route exact path="/about" component={AboutPage}/>
                 <Route exact path="/team" component={TeamPage}/>
+                <Route exact path="/sponsors" component={SponserPage}/>
                 <Route path="/:category/dept" component={DeptListPage}/>
                 <Route component={NoMatch}/>
             </Switch>
