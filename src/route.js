@@ -18,11 +18,13 @@ const Router=({store})=>{
     return(
         <Provider store={store}>
         <BrowserRouter>
-        <Switch/>
+        <Header/>
+        <Switch>
             <Route path="/:category/dept/:id" component={CategoryListPage}/>
             <Route path="/">
                 <AnimationApp/>
            </Route>
+           </Switch>
         </BrowserRouter>
     </Provider>
     )
@@ -32,18 +34,17 @@ const AnimationApp=()=>{
     let location=useLocation()
     return(
         <div>
-            <Header/>
             <TransitionGroup>
                 <CSSTransition
                 key={location.key}
                 classNames='fade'
                 timeout={150}>
             <Switch location={location}>
-                <Route exact path="/" component={IndexPage}/>
-                <Route exact path="/about" component={AboutPage}/>
-                <Route exact path="/team" component={TeamPage}/>
-                <Route exact path="/sponsors" component={SponserPage}/>
+                <Route path="/about" component={AboutPage}/>
+                <Route path="/team" component={TeamPage}/>
+                <Route path="/sponsors" component={SponserPage}/>
                 <Route path="/:category/dept" component={DeptListPage}/>
+                <Route exact path="/" component={IndexPage}/>
                 <Route component={NoMatch}/>
             </Switch>
             </CSSTransition>

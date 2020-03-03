@@ -1,7 +1,8 @@
 .container {
   width: 100vw;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  padding-top: 80px;
+  height: calc((var(--vh, 1vh) * 100) - 80px);
   /* background: rgb(92, 68, 218);
   background: linear-gradient(
     180deg,
@@ -10,12 +11,10 @@
     rgba(207, 100, 133, 1) 100%
   ); */
   background: rgb(253, 135, 98);
-  background: linear-gradient(
-    #00c9ff, #92fe9d
-  );
+  background: linear-gradient(#00c9ff, #92fe9d);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -51,9 +50,7 @@
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   background: rgb(253, 135, 98);
-  background: linear-gradient(
-    #00c9ff, #92fe9d
-  );
+  background: linear-gradient(#00c9ff, #92fe9d);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +61,7 @@
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   background: rgb(253, 135, 98);
-  background: linear-gradient(
-    #00c9ff, #92fe9d
-  );
+  background: linear-gradient(#00c9ff, #92fe9d);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,4 +82,15 @@
 }
 .preEventShow {
   display: block;
+}
+
+@media screen and (max-device-height: 568px) {
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgContainer img {
+    width: 225px;
+  }
 }
