@@ -86,7 +86,7 @@
   display: block;
 }
 
-@media screen and (max-device-height: 568px) {
+@media screen and (max-device-height: 628px) {
   .imgContainer {
     display: flex;
     justify-content: center;
