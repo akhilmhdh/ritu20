@@ -71,7 +71,9 @@ class workShopDetails extends Component{
                     <div className={workShopDetailsStyle.arrow}
                     onClick={()=>{this.props.click();
                         this.props.history.push(`/${this.props.match.params.category}/dept/${this.props.match.params.id}`)}}>
-                        <span>&#10006;</span></div>
+                        <img src="/img/close.png" alt="close"/>
+                        <div>{this.props.head[index].name}</div>
+                    </div>
                     <div className={workShopDetailsStyle.tabs}>
                         <div id="0" onClick={this.onClick} 
                         className={this.state.index===0?workShopDetailsStyle.active:null}>Details</div>
