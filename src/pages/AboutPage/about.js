@@ -16,7 +16,7 @@ class AboutPage extends Component{
                 <div className={aboutStyle.title}>Ritu</div>
                 <div className={aboutStyle.writeUpContainer}>
                     <p>
-                    RITU is one of the top mettle fests of Kerala. boasting over 2000 footfalls per day for the different events, RITU is a unique and humongous technocultural fest that awes and thrills everyone by its own stature. It is a beautiful amalgamation of different technical events and cultural extravaganzas, which holds up the legacy and grandeur of RIT. And the fact that RITU is the most awaited technocultural fest in Kottayam, it is a testimony in itself. Prancing through the path illuminated by the alumni, it is strenuous to match the caliber and legacy. However, with synergy and industriousness, we could outlive the expectations to date and hanker to pursue in the future.
+                    Ritu is one of the top mettle fests of Kerala boasting over 2000 footfalls per day for different events. Ritu is a unique and humongous technocultural fest that awes and thrills everyone by its own stature. It is a beautiful amalgamation of different technical events and cultural extravaganzas, which holds up the legacy and grandeur of RIT. And the fact that Ritu is the most awaited technocultural fest in Kottayam is a testimony in itself. Prancing through the path illuminated by the alumni, it is strenuous to match the caliber and legacy. However, with synergy and industriousness, we could outlive the expectations to date and hanker to pursue in the future.
                     </p>
                     <div className={aboutStyle.boldItems}>
                      <div className={aboutStyle.boldItem}>
