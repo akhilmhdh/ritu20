@@ -18,7 +18,7 @@ class Header extends Component{
     return(<div className={headerStyle.container}>
         <nav className={headerStyle.navContainer}>
             <Link to="/" className={!this.state.active?`${headerStyle.logo} ${headerStyle.blurredLogo}`:headerStyle.logo}>
-                <div><img src="/img/ritu2.png" alt="logo"/></div>
+                <div><img src="/img/ritu.png" alt="logo"/></div>
                 <div className={headerStyle.ritu}>
                             Ritu<sup><sup>20</sup></sup>
                 </div>
@@ -65,7 +65,7 @@ class Header extends Component{
                     <a href="https://www.facebook.com/rituofficial" target="_blank"
                     rel="noopener noreferrer"><img src="/img/facebook.png" alt="social"/></a>
                     <a href="mailto:ritu@rit.ac.in" target="_blank"
-                        rel="noopener noreferrer"><img src="/img/email.png" alt="mailID"/></a>
+                        rel="noopener noreferrer"><img src="/img/mail.png" alt="mailID"/></a>
                     <a href="http://ca.ritu20.com" target="_blank"
                     rel="noopener noreferrer"><img src="/img/car.png" alt="CA"/></a>
                 </div>

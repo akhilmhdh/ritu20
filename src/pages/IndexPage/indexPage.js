@@ -32,7 +32,7 @@ class IndexPage extends Component{
                         <a href="https://www.facebook.com/rituofficial" target="_blank"
                         rel="noopener noreferrer"><img src="/img/facebook.png" alt="social"/></a>
                         <a href="mailto:ritu@rit.ac.in" target="_blank"
-                        rel="noopener noreferrer"><img src="/img/email.png" alt="mailID"/></a>
+                        rel="noopener noreferrer"><img src="/img/mail.png" alt="mailID"/></a>
                         <a href="http://ca.ritu20.com" target="_blank"
                         rel="noopener noreferrer"><img src="/img/car.png" alt="CA"/></a>
             </div>
