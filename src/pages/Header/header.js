@@ -18,7 +18,7 @@ class Header extends Component{
     return(<div className={headerStyle.container}>
         <nav className={headerStyle.navContainer}>
             <Link to="/" className={!this.state.active?`${headerStyle.logo} ${headerStyle.blurredLogo}`:headerStyle.logo}>
-                <div><img src="/img/ritu2.png" alt="logo"/></div>
+                <div><img src="/img/ritu.png" alt="logo"/></div>
                 <div className={headerStyle.ritu}>
                             Ritu<sup><sup>20</sup></sup>
                 </div>
