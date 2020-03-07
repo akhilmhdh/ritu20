@@ -20,7 +20,7 @@ const APIurl="https://rituback.azurewebsites.net/";
 class CategoryListPage extends Component{
     constructor(props){
         super(props);
-        this.state={events:null,click:false};
+        this.state={events:null,click:false,currentData:"All"};
     }
     componentDidMount(){
       this.setState({click:false});
@@ -82,22 +82,26 @@ class CategoryListPage extends Component{
                 <div className="swiper-container-2">
                   <div className="swiper-wrapper">
                        {this.state.events.head.map((el,index)=>{
-                           return(
-                          <div className={`swiper-slide ${categoryListPageStyle.img_cards}`}
-                          key={index}
-                           onClick={()=>{
-                             const url=this.props.match.params.category==="events"
-                             ?`${this.props.match.url}/${index}/eventDetails`
-                             :`${this.props.match.url}/${index}/workShopDetails`;
-                             this.setState({click:true});
-                             this.props.history.push(url)
-                           }}
-                          >
-                            <div className={categoryListPageStyle.imgContainer}>
-                              <img src={el.image} alt="images"/>
-                            </div>
-                           </div>
-                           )
+                           if(el.category===this.state.currentData || this.state.currentData==="All"){
+                            return(
+                              <div className={`swiper-slide ${categoryListPageStyle.img_cards}`}
+                              key={index}
+                               onClick={()=>{
+                                 const url=this.props.match.params.category==="events"
+                                 ?`${this.props.match.url}/${index}/eventDetails`
+                                 :`${this.props.match.url}/${index}/workShopDetails`;
+                                 this.setState({click:true});
+                                 this.props.history.push(url)
+                               }}
+                              >
+                                <div className={categoryListPageStyle.imgContainer}>
+                                  <img src={el.image} alt="images"/>
+                                </div>
+                               </div>
+                               )
+                           }else{
+                             return null;
+                           }
                        })}
                   </div>
                 <div className={`swiper-pagination ${categoryListPageStyle.pagination}`}></div>
