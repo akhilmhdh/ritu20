@@ -11,7 +11,7 @@ const Tab1=(props)=>{
     const url=(props.seats<=0 || props.available<=0 || props.mail ==="https://ritu20.com/")?null:props.mail;
     
     return(<div className={eventDetailsStyle.tab1Container}>
-        <div className={!url?eventDetailsStyle.submitBtn:
+        <div className={url?eventDetailsStyle.submitBtn:
             `${eventDetailsStyle.submitBtn} ${eventDetailsStyle.submitBtnDisable}`}>
         <a href={url}
         target="_blank"

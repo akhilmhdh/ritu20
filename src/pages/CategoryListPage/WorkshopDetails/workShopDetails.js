@@ -8,9 +8,16 @@ const cvtJSON2HTML=(x)=>{
 }
 
 const Tab1=(props)=>{
+    const url=(props.seats<=0 || props.available<=0 || props.mail ==="https://ritu20.com/")?null:props.mail;
+
     return(<div className={workShopDetailsStyle.tab1Container}>
-        <div className={workShopDetailsStyle.submitBtn}>
-        <a href={props.mail}>Register Now</a>
+        <div className={url?workShopDetailsStyle.submitBtn:
+            `${workShopDetailsStyle.submitBtn} ${workShopDetailsStyle.submitBtnDisable}`}>
+        <a href={props.mail}
+         target="_blank"
+         rel="noopener noreferrer"> 
+        {url?props.online?"Submit Your Entry":"Register Now":"coming soon"}
+        </a>
         </div>
         <div className={workShopDetailsStyle.price}>
             REG FEES: {props.fees}
