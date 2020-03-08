@@ -23,7 +23,32 @@
   top: 0;
   left: 10px;
 }
+.filterContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "poppins";
+  font-size: 25px;
+  padding-top: 1px;
+}
+.filterContainer div {
+  padding: 0 5px 0 5px;
+}
+.filterContainer > div:first-child {
+  font-size: 30px;
+  font-weight: bold;
+}
+.filterContainer > div:nth-child(2) {
+  min-width: 150px;
+  text-align: center;
+}
 
+.filterContainer > div:last-child {
+  font-size: 30px;
+  font-weight: bold;
+}
 .pagination span {
   background-color: #007aff;
 }

@@ -20,7 +20,7 @@ const APIurl="https://rituback.azurewebsites.net/";
 class CategoryListPage extends Component{
     constructor(props){
         super(props);
-        this.state={events:null,click:false,currentData:"All"};
+        this.state={events:null,click:false,currentType:null,typeIndex:0};
     }
     componentDidMount(){
       this.setState({click:false});
@@ -30,9 +30,9 @@ class CategoryListPage extends Component{
           console.log(err);
         })
         .then((data)=>{
-            this.setState({events:data});
+            this.setState({events:data,currentType:["ALL",...data.category]});
             // eslint-disable-next-line no-unused-vars
-            const swiper2 = new Swiper('.swiper-container-2', {
+            this.swiper2 = new Swiper('.swiper-container-2', {
               effect: 'coverflow',
               grabCursor: true,
               centeredSlides: true,
@@ -79,10 +79,21 @@ class CategoryListPage extends Component{
               <div className={categoryListPageStyle.container}
               style={this.props.blurred?{filter:"blur(2px)"}:null}>
                 <Arrow path={`/${this.props.match.params.category}/dept`} click={this.state.click}/>
+                <div className={categoryListPageStyle.filterContainer}>
+                    <div
+                    onClick={()=>{
+                      this.setState({typeIndex:((this.state.typeIndex-1)<0?this.state.currentType.length-1:this.state.typeIndex-1)},
+                    ()=>{this.swiper2.update()})}}> &lt;</div>
+                    <div> {this.state.currentType[this.state.typeIndex]}</div>
+                    <div
+                    onClick={()=>{this.setState({typeIndex:(this.state.typeIndex+1)%(this.state.currentType.length)},()=>{
+                      this.swiper2.update()
+                    })}}> &gt; </div>
+                </div>
                 <div className="swiper-container-2">
                   <div className="swiper-wrapper">
                        {this.state.events.head.map((el,index)=>{
-                           if(el.category===this.state.currentData || this.state.currentData==="All"){
+                           if(el.category===this.state.currentType[this.state.typeIndex] || this.state.currentType[this.state.typeIndex]==="ALL"){
                             return(
                               <div className={`swiper-slide ${categoryListPageStyle.img_cards}`}
                               key={index}
