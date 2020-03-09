@@ -39,6 +39,7 @@
 .filterContainer > div:first-child {
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
 }
 .filterContainer > div:nth-child(2) {
   min-width: 150px;
@@ -48,6 +49,7 @@
 .filterContainer > div:last-child {
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
 }
 .pagination span {
   background-color: #007aff;

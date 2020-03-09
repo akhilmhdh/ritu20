@@ -22,6 +22,11 @@ class IndexPage extends Component{
             <Birds/>
             <Clouds/>
             <Title/>
+            <div>
+                <canvas>
+                    
+                </canvas>
+            </div>
             <div className={styles.util}
             >rit.utsav</div>
             <div className={styles.socialContainer}>
