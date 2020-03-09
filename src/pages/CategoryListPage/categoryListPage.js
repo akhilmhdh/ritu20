@@ -30,7 +30,12 @@ class CategoryListPage extends Component{
           console.log(err);
         })
         .then((data)=>{
+          try{
             this.setState({events:data,currentType:["ALL",...data.category]});
+          }
+          catch(err){
+            this.setState({events:data,currentType:["ALL"]})
+          }
             // eslint-disable-next-line no-unused-vars
             this.swiper2 = new Swiper('.swiper-container-2', {
               effect: 'coverflow',
@@ -79,7 +84,7 @@ class CategoryListPage extends Component{
               <div className={categoryListPageStyle.container}
               style={this.props.blurred?{filter:"blur(2px)"}:null}>
                 <Arrow path={`/${this.props.match.params.category}/dept`} click={this.state.click}/>
-                <div className={categoryListPageStyle.filterContainer}>
+               {this.props.match.params.category==="events"? <div className={categoryListPageStyle.filterContainer}>
                     <div
                     onClick={()=>{
                       this.setState({typeIndex:((this.state.typeIndex-1)<0?this.state.currentType.length-1:this.state.typeIndex-1)},
@@ -89,7 +94,7 @@ class CategoryListPage extends Component{
                     onClick={()=>{this.setState({typeIndex:(this.state.typeIndex+1)%(this.state.currentType.length)},()=>{
                       this.swiper2.update()
                     })}}> &gt; </div>
-                </div>
+                </div>:null}
                 <div className="swiper-container-2">
                   <div className="swiper-wrapper">
                        {this.state.events.head.map((el,index)=>{
