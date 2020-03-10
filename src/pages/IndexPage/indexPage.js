@@ -7,7 +7,7 @@ import Birds from './birds/birdsSVG'
 import Clouds from './clouds/clouds'
 import girlStyle from './girl/girl.module.css'
 import styles from './indexPageStyle.module.css'
-import ButterFly from './butterfly/butterfly'
+// import ButterFly from './butterfly/butterfly'
 
 import { connect } from "react-redux";
 
@@ -17,15 +17,12 @@ class IndexPage extends Component{
         <div  className={this.props.blurred?`${styles.container} ${styles.blurContainer}`:styles.container}>
             <div className={girlStyle.animationContainer}>
                 <Girl/>
-                <ButterFly/>
+                {/* <ButterFly/> */}
             </div>
             <Birds/>
             <Clouds/>
             <Title/>
             <div>
-                <canvas>
-                    
-                </canvas>
             </div>
             <div className={styles.util}
             >rit.utsav</div>

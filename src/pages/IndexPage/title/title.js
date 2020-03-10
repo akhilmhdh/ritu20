@@ -69,12 +69,12 @@ class Title extends Component{
   render(){
     return(
         <div className={titleStyle.titleContainer}>
-            <div className={titleStyle.titleOne}>THE BEST</div>
-            <div className={titleStyle.titleTwo}>SEASON IS</div>
-            <div className={this.state.color?`${titleStyle.titleThree} ${titleStyle.titleThreeAddon}`:titleStyle.titleThree}
+            <div className={titleStyle.titleOne}>STAY SAFE</div>
+            <div className={titleStyle.titleTwo}>STAY ALERT</div>
+            {/* <div className={this.state.color?`${titleStyle.titleThree} ${titleStyle.titleThreeAddon}`:titleStyle.titleThree}
             >{this.state.typing}
                 <span className={this.state.symbol==="|"?titleStyle.blink:`${titleStyle.blink} ${titleStyle.blinkRed}`}>{this.state.symbol}</span>
-            </div>
+            </div> */}
         </div>
         )
   }

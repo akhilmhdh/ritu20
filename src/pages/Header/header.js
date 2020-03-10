@@ -24,8 +24,9 @@ class Header extends Component{
                 </div>
             </Link>
             <div
-                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}
-                >MAR 19 <span style={{fontFamily:"harabararegular"}}>-</span> Mar 22
+                className={this.state.active?headerStyle.date:`${headerStyle.date} ${headerStyle.dateActive}`}>
+                    {/* MAR 19 <span style={{fontFamily:"harabararegular"}}>-</span> Mar 22 */}
+                    COMING SOON
             </div>
             <span className={headerStyle.navToggle} 
              id={this.state.active?null:"navRotate"}
