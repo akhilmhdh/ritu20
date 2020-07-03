@@ -10,6 +10,6 @@ jobs:
         with:
           header: Developers
           imageSize: 150
-          columnsPerRow: 1         
+          columnsPerRow: 2         
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
