@@ -27,14 +27,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <tr>
                 <td align="center">
                     <a href="https://github.com/akhilmhdh">
-                        <img src="https://avatars1.githubusercontent.com/u/31166322?v=4" width="150;" alt="akhilmhdh"/>
+                        <img src="https://avatars1.githubusercontent.com/u/31166322?v=4" width="100;" alt="akhilmhdh"/>
                         <br />
                         <sub><b>Akhil Mohan</b></sub>
                     </a>
-                </td>
+                </td></tr>
+<tr>
                 <td align="center">
                     <a href="https://github.com/dravog7">
-                        <img src="https://avatars2.githubusercontent.com/u/31211464?v=4" width="150;" alt="dravog7"/>
+                        <img src="https://avatars2.githubusercontent.com/u/31211464?v=4" width="100;" alt="dravog7"/>
                         <br />
                         <sub><b>John Abraham</b></sub>
                     </a>
@@ -42,14 +43,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <tr>
                 <td align="center">
                     <a href="https://github.com/ghubofSmaran">
-                        <img src="https://avatars2.githubusercontent.com/u/48565910?v=4" width="150;" alt="ghubofSmaran"/>
+                        <img src="https://avatars2.githubusercontent.com/u/48565910?v=4" width="100;" alt="ghubofSmaran"/>
                         <br />
                         <sub><b>Smaran</b></sub>
                     </a>
-                </td>
+                </td></tr>
+<tr>
                 <td align="center">
                     <a href="https://github.com/balamurali27">
-                        <img src="https://avatars2.githubusercontent.com/u/25403045?v=4" width="150;" alt="balamurali27"/>
+                        <img src="https://avatars2.githubusercontent.com/u/25403045?v=4" width="100;" alt="balamurali27"/>
                         <br />
                         <sub><b>Balamurali M</b></sub>
                     </a>
