@@ -31,24 +31,21 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
                         <br />
                         <sub><b>Akhil Mohan</b></sub>
                     </a>
-                </td></tr>
-<tr>
+                </td>
                 <td align="center">
                     <a href="https://github.com/dravog7">
                         <img src="https://avatars2.githubusercontent.com/u/31211464?v=4" width="100;" alt="dravog7"/>
                         <br />
                         <sub><b>John Abraham</b></sub>
                     </a>
-                </td></tr>
-<tr>
+                </td>
                 <td align="center">
                     <a href="https://github.com/ghubofSmaran">
                         <img src="https://avatars2.githubusercontent.com/u/48565910?v=4" width="100;" alt="ghubofSmaran"/>
                         <br />
                         <sub><b>Smaran</b></sub>
                     </a>
-                </td></tr>
-<tr>
+                </td>
                 <td align="center">
                     <a href="https://github.com/balamurali27">
                         <img src="https://avatars2.githubusercontent.com/u/25403045?v=4" width="100;" alt="balamurali27"/>
