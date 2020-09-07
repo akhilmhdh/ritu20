@@ -46,6 +46,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
             <br />
             <sub><b>Smaran</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/balamurali27">
+            <img src="https://avatars2.githubusercontent.com/u/25403045?v=4" width="100;" alt="balamurali27"/>
+            <br />
+            <sub><b>Balamurali M</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
