@@ -23,7 +23,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Developers
-<!-- readme: collaborators -start --> 
+<!-- readme: contributors -start --> 
 <table>
 <tr>
     <td align="center">
@@ -48,4 +48,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
         </a>
     </td></tr>
 </table>
-<!-- readme: collaborators -end -->
+<!-- readme: contributors -end -->
