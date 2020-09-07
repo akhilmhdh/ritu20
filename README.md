@@ -23,5 +23,29 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Developers
-<!-- readme: collaborators -start -->
+<!-- readme: collaborators -start --> 
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/akhilmhdh">
+            <img src="https://avatars1.githubusercontent.com/u/31166322?v=4" width="100;" alt="akhilmhdh"/>
+            <br />
+            <sub><b>Akhil Mohan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/dravog7">
+            <img src="https://avatars2.githubusercontent.com/u/31211464?v=4" width="100;" alt="dravog7"/>
+            <br />
+            <sub><b>John Abraham</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ghubofSmaran">
+            <img src="https://avatars2.githubusercontent.com/u/48565910?v=4" width="100;" alt="ghubofSmaran"/>
+            <br />
+            <sub><b>Smaran</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators -end -->
